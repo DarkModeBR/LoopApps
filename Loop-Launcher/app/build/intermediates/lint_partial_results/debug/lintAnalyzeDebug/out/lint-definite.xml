@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.5.0" type="incidents">
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios.">
+        <show-url
+            description="Show https://developer.android.com/adaptive-apps"
+            url="https://developer.android.com/adaptive-apps"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="49"
+            column="13"
+            startOffset="2264"
+            endLine="49"
+            endColumn="50"
+            endOffset="2301"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/AppCardAdapter.kt"
+            line="44"
+            column="9"
+            startOffset="1337"
+            endLine="44"
+            endColumn="31"
+            endOffset="1359"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/ui/menu/MenuAdapter.kt"
+            line="40"
+            column="9"
+            startOffset="1268"
+            endLine="40"
+            endColumn="31"
+            endOffset="1290"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/TrayAdapter.kt"
+            line="35"
+            column="9"
+            startOffset="1221"
+            endLine="35"
+            endColumn="31"
+            endOffset="1243"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="258"/>
+    </incident>
+
+    <incident
+        id="IconMissingDensityFolder"
+        severity="warning"
+        message="Missing density variation folders in `src\main\res`: drawable-hdpi, drawable-mdpi, drawable-xxhdpi">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `ChipView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/ChipView.kt"
+            line="16"
+            column="7"
+            startOffset="493"
+            endLine="16"
+            endColumn="15"
+            endOffset="501"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `HeaderView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/HeaderView.kt"
+            line="19"
+            column="7"
+            startOffset="615"
+            endLine="19"
+            endColumn="17"
+            endOffset="625"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `SwitchView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/ui/menu/MenuWidgets.kt"
+            line="13"
+            column="7"
+            startOffset="364"
+            endLine="13"
+            endColumn="17"
+            endOffset="374"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `RadioView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/ui/menu/MenuWidgets.kt"
+            line="67"
+            column="7"
+            startOffset="2215"
+            endLine="67"
+            endColumn="16"
+            endOffset="2224"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `SwatchView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/ui/menu/MenuWidgets.kt"
+            line="96"
+            column="7"
+            startOffset="3214"
+            endLine="96"
+            endColumn="17"
+            endOffset="3224"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `SaverView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/screensaver/SaverView.kt"
+            line="35"
+            column="7"
+            startOffset="1203"
+            endLine="35"
+            endColumn="16"
+            endOffset="1212"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `WallpaperLayer` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+            line="35"
+            column="7"
+            startOffset="1160"
+            endLine="35"
+            endColumn="21"
+            endOffset="1174"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `String.toUri` instead?">
+        <fix-replace
+            description="Replace with the toUri extension function"
+            family="Replace with the toUri extension function"
+            robot="true"
+            independent="true"
+            oldString="Uri.parse(&quot;package:${app.packageName}&quot;)"
+            replacement="&quot;package:${app.packageName}&quot;.toUri()"
+            reformat="value"
+            imports="androidx.core.net.toUri"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/apps/AppMenus.kt"
+                startOffset="3046"
+                endOffset="3085"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/apps/AppMenus.kt"
+            line="68"
+            column="74"
+            startOffset="3046"
+            endLine="68"
+            endColumn="113"
+            endOffset="3085"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `String.toUri` instead?">
+        <fix-replace
+            description="Replace with the toUri extension function"
+            family="Replace with the toUri extension function"
+            robot="true"
+            independent="true"
+            oldString="Uri.parse(&quot;package:${app.packageName}&quot;)"
+            replacement="&quot;package:${app.packageName}&quot;.toUri()"
+            reformat="value"
+            imports="androidx.core.net.toUri"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/apps/AppMenus.kt"
+                startOffset="3278"
+                endOffset="3317"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/apps/AppMenus.kt"
+            line="72"
+            column="62"
+            startOffset="3278"
+            endLine="72"
+            endColumn="101"
+            endOffset="3317"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX function `createBitmap` instead?">
+        <fix-replace
+            description="Replace with the createBitmap function"
+            family="Replace with the createBitmap function"
+            robot="true"
+            independent="true"
+            oldString="Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)"
+            replacement="createBitmap(width, height)"
+            reformat="value"
+            imports="androidx.core.graphics.createBitmap"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/CardArtLoader.kt"
+                startOffset="2077"
+                endOffset="2136"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/CardArtLoader.kt"
+            line="57"
+            column="22"
+            startOffset="2077"
+            endLine="57"
+            endColumn="81"
+            endOffset="2136"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension property `View.isVisible` instead?">
+        <fix-replace
+            description="Replace with the isVisible extension property"
+            family="Replace with the isVisible extension property"
+            robot="true"
+            independent="true"
+            oldString="label.visibility == View.VISIBLE"
+            replacement="label.isVisible"
+            reformat="value"
+            imports="androidx.core.view.isVisible"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/ChipView.kt"
+                startOffset="2776"
+                endOffset="2808"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/ChipView.kt"
+            line="74"
+            column="26"
+            startOffset="2776"
+            endLine="74"
+            endColumn="58"
+            endOffset="2808"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension property `View.isVisible` instead?">
+        <fix-replace
+            description="Replace with the isVisible extension property"
+            family="Replace with the isVisible extension property"
+            robot="true"
+            independent="true"
+            oldString="badge.visibility == View.VISIBLE"
+            replacement="badge.isVisible"
+            reformat="value"
+            imports="androidx.core.view.isVisible"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/ChipView.kt"
+                startOffset="2812"
+                endOffset="2844"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/ChipView.kt"
+            line="74"
+            column="62"
+            startOffset="2812"
+            endLine="74"
+            endColumn="94"
+            endOffset="2844"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension property `View.isVisible` instead?">
+        <fix-replace
+            description="Replace with the isVisible extension property"
+            family="Replace with the isVisible extension property"
+            robot="true"
+            independent="true"
+            oldString="it.visibility == View.VISIBLE"
+            replacement="it.isVisible"
+            reformat="value"
+            imports="androidx.core.view.isVisible"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/HeaderView.kt"
+                startOffset="4102"
+                endOffset="4131"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/HeaderView.kt"
+            line="103"
+            column="74"
+            startOffset="4102"
+            endLine="103"
+            endColumn="103"
+            endOffset="4131"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `Int.toDrawable` instead?">
+        <fix-replace
+            description="Replace with the toDrawable extension function"
+            family="Replace with the toDrawable extension function"
+            robot="true"
+            independent="true"
+            oldString="ColorDrawable(style.accent)"
+            replacement="style.accent.toDrawable()"
+            reformat="value"
+            imports="androidx.core.graphics.drawable.toDrawable"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/ui/menu/MenuAdapter.kt"
+                startOffset="14683"
+                endOffset="14710"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/ui/menu/MenuAdapter.kt"
+            line="331"
+            column="41"
+            startOffset="14683"
+            endLine="331"
+            endColumn="68"
+            endOffset="14710"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?">
+        <fix-composite
+            description="Replace with the edit extension function"
+            family="Replace with the edit extension function"
+            robot="true"
+            independent="true">
+            <fix-replace
+                description="Replace with edit"
+                robot="true"
+                independent="true"
+                oldString="edit("
+                replacement="edit"
+                reformat="value"
+                imports="androidx.core.content.edit"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+                    startOffset="1109"
+                    endOffset="1114"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with  {"
+                robot="true"
+                independent="true"
+                oldString=")"
+                replacement=" {"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+                    startOffset="1114"
+                    endOffset="1115"/>
+            </fix-replace>
+            <fix-replace
+                description="Delete &quot;.&quot;"
+                robot="true"
+                independent="true"
+                oldString="."
+                replacement=""
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+                    startOffset="1115"
+                    endOffset="1116"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with }"
+                robot="true"
+                independent="true"
+                oldString=".apply()"
+                replacement="}"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+                    startOffset="1147"
+                    endOffset="1155"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+            line="29"
+            column="13"
+            startOffset="1103"
+            endLine="29"
+            endColumn="25"
+            endOffset="1115"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX function `createBitmap` instead?">
+        <fix-replace
+            description="Replace with the createBitmap function"
+            family="Replace with the createBitmap function"
+            robot="true"
+            independent="true"
+            oldString="Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)"
+            replacement="createBitmap(width, height)"
+            reformat="value"
+            imports="androidx.core.graphics.createBitmap"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/screensaver/SaverViews.kt"
+                startOffset="3750"
+                endOffset="3809"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/screensaver/SaverViews.kt"
+            line="111"
+            column="22"
+            startOffset="3750"
+            endLine="111"
+            endColumn="81"
+            endOffset="3809"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `String.toUri` instead?">
+        <fix-replace
+            description="Replace with the toUri extension function"
+            family="Replace with the toUri extension function"
+            robot="true"
+            independent="true"
+            oldString="Uri.parse(&quot;package:${activity.packageName}&quot;)"
+            replacement="&quot;package:${activity.packageName}&quot;.toUri()"
+            reformat="value"
+            imports="androidx.core.net.toUri"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/update/UpdateInstaller.kt"
+                startOffset="1690"
+                endOffset="1734"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/update/UpdateInstaller.kt"
+            line="44"
+            column="64"
+            startOffset="1690"
+            endLine="44"
+            endColumn="108"
+            endOffset="1734"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `Canvas.withScale` instead?">
+        <fix-composite
+            description="Replace with the withScale extension function"
+            family="Replace with the withScale extension function"
+            robot="true"
+            independent="true">
+            <fix-replace
+                description="Replace with withScale(scale, scale"
+                robot="true"
+                independent="true"
+                oldString="save("
+                replacement="withScale(scale, scale"
+                reformat="value"
+                imports="androidx.core.graphics.withScale"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9754"
+                    endOffset="9759"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with ) {"
+                robot="true"
+                independent="true"
+                oldString=")"
+                replacement=") {"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9759"
+                    endOffset="9760"/>
+            </fix-replace>
+            <fix-replace
+                description="Delete &quot;            canvas.scale(scale, scale)&#xA;&quot;"
+                robot="true"
+                independent="true"
+                oldString="            canvas.scale(scale, scale)&#xA;"
+                replacement=""
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9761"
+                    endOffset="9800"/>
+            </fix-replace>
+            <fix-replace
+                description="Delete &quot;canvas.&quot;"
+                robot="true"
+                independent="true"
+                oldString="canvas."
+                replacement=""
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9812"
+                    endOffset="9819"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with this"
+                robot="true"
+                independent="true"
+                oldString="canvas"
+                replacement="this"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9928"
+                    endOffset="9934"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with }"
+                robot="true"
+                independent="true"
+                oldString="canvas.restore()"
+                replacement="}"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9956"
+                    endOffset="9972"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with     "
+                robot="true"
+                independent="true"
+                oldString=""
+                replacement="    "
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9800"
+                    endOffset="9800"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with     "
+                robot="true"
+                independent="true"
+                oldString=""
+                replacement="    "
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                    startOffset="9905"
+                    endOffset="9905"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+            line="266"
+            column="13"
+            startOffset="9747"
+            endLine="266"
+            endColumn="26"
+            endOffset="9760"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `Bitmap.scale` instead?">
+        <fix-replace
+            description="Replace with the scale extension function"
+            family="Replace with the scale extension function"
+            robot="true"
+            independent="true"
+            oldString="Bitmap.createScaledBitmap(frame, THUMB_WIDTH, height.coerceAtLeast(1), true)"
+            replacement="frame.scale(THUMB_WIDTH, height.coerceAtLeast(1))"
+            reformat="value"
+            imports="androidx.core.graphics.scale"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperThumbs.kt"
+                startOffset="2783"
+                endOffset="2859"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperThumbs.kt"
+            line="70"
+            column="13"
+            startOffset="2783"
+            endLine="70"
+            endColumn="89"
+            endOffset="2859"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/home/ChipView.kt"
+            line="67"
+            column="22"
+            startOffset="2524"
+            endLine="67"
+            endColumn="38"
+            endOffset="2540"/>
+    </incident>
+
+</incidents>

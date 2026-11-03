@@ -1,0 +1,409 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.loop.launcher"
+4    android:versionCode="1"
+5    android:versionName="0.1.0" >
+6
+7    <uses-sdk
+7-->INJECTED
+8        android:minSdkVersion="24"
+8-->INJECTED
+9        android:targetSdkVersion="37" />
+9-->INJECTED
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:4:5-79
+11-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:4:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:5:5-67
+12-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+13-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:6:5-83
+13-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:6:22-80
+14    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+14-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:7:5-82
+14-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:7:22-79
+15    <uses-permission
+15-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:8:5-107
+16        android:name="android.permission.READ_EXTERNAL_STORAGE"
+16-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:8:22-77
+17        android:maxSdkVersion="32" />
+17-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:8:78-104
+18    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+18-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:9:5-76
+18-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:9:22-73
+19    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+19-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:10:5-75
+19-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:10:22-72
+20
+21    <uses-feature
+21-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:12:5-87
+22        android:name="android.software.leanback"
+22-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:12:19-59
+23        android:required="false" />
+23-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:12:60-84
+24    <uses-feature
+24-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:13:5-90
+25        android:name="android.hardware.touchscreen"
+25-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:13:19-62
+26        android:required="false" />
+26-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:13:63-87
+27
+28    <queries>
+28-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:15:5-30:15
+29        <intent>
+29-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:16:9-19:18
+30            <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:13-65
+30-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:21-62
+31
+32            <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:18:13-73
+32-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:18:23-70
+33        </intent>
+34        <intent>
+34-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:20:9-23:18
+35            <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:13-65
+35-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:21-62
+36
+37            <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+37-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:22:13-82
+37-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:22:23-79
+38        </intent>
+39        <intent>
+39-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:24:9-27:18
+40            <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:13-65
+40-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:21-62
+41
+42            <category android:name="android.intent.category.HOME" />
+42-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:26:13-69
+42-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:26:23-66
+43        </intent>
+44
+45        <package android:name="moe.shizuku.privileged.api" />
+45-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:28:9-62
+45-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:28:18-59
+46        <package android:name="com.google.android.apps.tv.launcherx" />
+46-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:29:9-72
+46-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:29:18-69
+47    </queries>
+48
+49    <permission
+49-->[androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:22:5-24:47
+50        android:name="com.loop.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+50-->[androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:23:9-81
+51        android:protectionLevel="signature" />
+51-->[androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:24:9-44
+52
+53    <uses-permission android:name="com.loop.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+53-->[androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:26:5-97
+53-->[androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:26:22-94
+54    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+54-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:8:5-78
+54-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:8:22-75
+55
+56    <application
+56-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:32:5-129:19
+57        android:allowBackup="false"
+57-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:33:9-36
+58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+58-->[androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:28:18-86
+59        android:banner="@drawable/banner"
+59-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:35:9-42
+60        android:extractNativeLibs="false"
+60-->INJECTED
+61        android:icon="@mipmap/ic_launcher"
+61-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:36:9-43
+62        android:label="@string/app_name"
+62-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:37:9-41
+63        android:requestLegacyExternalStorage="true"
+63-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:34:9-52
+64        android:supportsRtl="false"
+64-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:38:9-36
+65        android:theme="@style/Theme.Loop" >
+65-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:39:9-42
+66        <activity
+66-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:41:9-64:20
+67            android:name="com.loop.launcher.home.HomeActivity"
+67-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:42:13-46
+68            android:banner="@drawable/banner"
+68-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:43:13-46
+69            android:clearTaskOnLaunch="true"
+69-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:44:13-45
+70            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout|uiMode"
+70-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:45:13-114
+71            android:exported="true"
+71-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:46:13-36
+72            android:launchMode="singleTask"
+72-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:47:13-44
+73            android:resumeWhilePausing="true"
+73-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:48:13-46
+74            android:screenOrientation="landscape"
+74-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:49:13-50
+75            android:stateNotNeeded="true" >
+75-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:50:13-42
+76            <intent-filter>
+76-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:51:13-54:29
+77                <action android:name="android.intent.action.MAIN" />
+77-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:13-65
+77-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:21-62
+78
+79                <category android:name="android.intent.category.LAUNCHER" />
+79-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:18:13-73
+79-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:18:23-70
+80            </intent-filter>
+81            <intent-filter>
+81-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:55:13-58:29
+82                <action android:name="android.intent.action.MAIN" />
+82-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:13-65
+82-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:21-62
+83
+84                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+84-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:22:13-82
+84-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:22:23-79
+85            </intent-filter>
+86            <intent-filter>
+86-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:59:13-63:29
+87                <action android:name="android.intent.action.MAIN" />
+87-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:13-65
+87-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:21-62
+88
+89                <category android:name="android.intent.category.HOME" />
+89-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:26:13-69
+89-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:26:23-66
+90                <category android:name="android.intent.category.DEFAULT" />
+90-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:62:17-76
+90-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:62:27-73
+91            </intent-filter>
+92        </activity>
+93
+94        <provider
+94-->INJECTED
+95            android:name="androidx.core.content.FileProvider"
+95-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:67:13-62
+96            android:authorities="com.loop.launcher.updates"
+96-->INJECTED
+97            android:exported="false"
+97-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:69:13-37
+98            android:grantUriPermissions="true" >
+98-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:70:13-47
+99            <meta-data
+99-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:71:13-73:54
+100                android:name="android.support.FILE_PROVIDER_PATHS"
+100-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:72:17-67
+101                android:resource="@xml/file_paths" />
+101-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:73:17-51
+102        </provider>
+103        <provider
+103-->INJECTED
+104            android:name="rikka.shizuku.ShizukuProvider"
+104-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:77:13-57
+105            android:authorities="com.loop.launcher.shizuku"
+105-->INJECTED
+106            android:enabled="true"
+106-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:79:13-35
+107            android:exported="true"
+107-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:80:13-36
+108            android:multiprocess="false"
+108-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:81:13-41
+109            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+109-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:82:13-79
+110
+111        <service
+111-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:84:9-92:19
+112            android:name="com.loop.launcher.notifications.LoopNotificationListener"
+112-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:85:13-67
+113            android:exported="true"
+113-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:86:13-36
+114            android:label="@string/app_name"
+114-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:87:13-45
+115            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+115-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:88:13-87
+116            <intent-filter>
+116-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:89:13-91:29
+117                <action android:name="android.service.notification.NotificationListenerService" />
+117-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:90:17-99
+117-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:90:25-96
+118            </intent-filter>
+119        </service>
+120        <service
+120-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:94:9-106:19
+121            android:name="com.loop.launcher.screensaver.LoopDreamService"
+121-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:95:13-57
+122            android:exported="true"
+122-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:96:13-36
+123            android:label="@string/saver_title"
+123-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:97:13-48
+124            android:permission="android.permission.BIND_DREAM_SERVICE" >
+124-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:98:13-71
+125            <intent-filter>
+125-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:99:13-102:29
+126                <action android:name="android.service.dreams.DreamService" />
+126-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:100:17-78
+126-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:100:25-75
+127
+128                <category android:name="android.intent.category.DEFAULT" />
+128-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:62:17-76
+128-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:62:27-73
+129            </intent-filter>
+130
+131            <meta-data
+131-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:103:13-105:49
+132                android:name="android.service.dream"
+132-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:104:17-53
+133                android:resource="@xml/dream" />
+133-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:105:17-46
+134        </service>
+135        <service
+135-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:108:9-119:19
+136            android:name="com.loop.launcher.privileged.HomeCaptureService"
+136-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:109:13-58
+137            android:exported="true"
+137-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:110:13-36
+138            android:label="@string/capture_service_label"
+138-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:111:13-58
+139            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+139-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:112:13-79
+140            <intent-filter>
+140-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:113:13-115:29
+141                <action android:name="android.accessibilityservice.AccessibilityService" />
+141-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:114:17-92
+141-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:114:25-89
+142            </intent-filter>
+143
+144            <meta-data
+144-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:116:13-118:56
+145                android:name="android.accessibilityservice"
+145-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:117:17-60
+146                android:resource="@xml/home_capture" />
+146-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:118:17-53
+147        </service>
+148
+149        <activity
+149-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:121:9-88
+150            android:name="com.loop.launcher.screensaver.SaverActivity"
+150-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:121:19-60
+151            android:exported="false" />
+151-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:121:61-85
+152        <activity
+152-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:9-130
+153            android:name="com.loop.launcher.privileged.PowerMenuActivity"
+153-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:19-63
+154            android:exported="false"
+154-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:64-88
+155            android:theme="@style/Theme.Loop.Menu" />
+155-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:89-127
+156        <activity
+156-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:9-131
+157            android:name="com.loop.launcher.privileged.AccessHelpActivity"
+157-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:19-64
+158            android:exported="false"
+158-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:65-89
+159            android:theme="@style/Theme.Loop.Menu" />
+159-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:90-128
+160        <activity
+160-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:9-131
+161            android:name="com.loop.launcher.settings.SettingsMenuActivity"
+161-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:19-64
+162            android:exported="false"
+162-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:65-89
+163            android:theme="@style/Theme.Loop.Menu" />
+163-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:90-128
+164        <activity
+164-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:9-122
+165            android:name="com.loop.launcher.apps.AppMenuActivity"
+165-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:19-55
+166            android:exported="false"
+166-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:56-80
+167            android:theme="@style/Theme.Loop.Menu" />
+167-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:81-119
+168        <activity
+168-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:9-127
+169            android:name="com.loop.launcher.status.StatusMenuActivity"
+169-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:19-60
+170            android:exported="false"
+170-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:61-85
+171            android:theme="@style/Theme.Loop.Menu" />
+171-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:86-124
+172        <activity
+172-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:9-141
+173            android:name="com.loop.launcher.notifications.NotificationsMenuActivity"
+173-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:19-74
+174            android:exported="false"
+174-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:75-99
+175            android:theme="@style/Theme.Loop.Menu" />
+175-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:100-138
+176        <activity
+176-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:9-127
+177            android:name="com.loop.launcher.update.UpdateMenuActivity"
+177-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:19-60
+178            android:exported="false"
+178-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:61-85
+179            android:theme="@style/Theme.Loop.Menu" />
+179-->C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:86-124
+180
+181        <meta-data
+181-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:11:9-13:36
+182            android:name="moe.shizuku.client.V3_SUPPORT"
+182-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:12:13-57
+183            android:value="true" />
+183-->[dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:13:13-33
+184
+185        <provider
+185-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+186            android:name="androidx.startup.InitializationProvider"
+186-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:25:13-67
+187            android:authorities="com.loop.launcher.androidx-startup"
+187-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:26:13-68
+188            android:exported="false" >
+188-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:27:13-37
+189            <meta-data
+189-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+190                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+190-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+191                android:value="androidx.startup" />
+191-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+192        </provider>
+193
+194        <receiver
+194-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+195            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+195-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+196            android:directBootAware="false"
+196-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+197            android:enabled="true"
+197-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+198            android:exported="true"
+198-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+199            android:permission="android.permission.DUMP" >
+199-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+200            <intent-filter>
+200-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+201                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+201-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+201-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+202            </intent-filter>
+203            <intent-filter>
+203-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+204                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+204-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+204-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+205            </intent-filter>
+206            <intent-filter>
+206-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+207                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+207-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+207-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+208            </intent-filter>
+209            <intent-filter>
+209-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+210                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+210-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+210-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+211            </intent-filter>
+212        </receiver>
+213    </application>
+214
+215</manifest>

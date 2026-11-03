@@ -1,0 +1,198 @@
+[
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_grid.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_grid.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_info.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_info.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_update.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_update.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_open.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_open.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_settings.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_cable.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_cable.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_arrow_down.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_arrow_down.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/xml_home_capture.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/xml/home_capture.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_thermometer.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_thermometer.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_eye.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_eye.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_home.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_usb.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_usb.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_pin.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_pin.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_move.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_move.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_globe.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_globe.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_no_network.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_no_network.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_eye_off.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_eye_off.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_bell.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_bell.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_trash.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_trash.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/xml_file_paths.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/xml_dream.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/xml/dream.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_moon.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_moon.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_status.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_status.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_close.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_cloud.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_cloud.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_check.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_plus.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_plus.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_apps.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_apps.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_wifi.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_wifi.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_restart.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_restart.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_palette.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_palette.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_power.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_power.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.loop.launcher.app-main-16:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_arrow_up.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_arrow_up.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_image.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_image.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_font.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_font.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable-xhdpi_banner.png.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable-xhdpi/banner.png"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_chevron_right.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_chevron_right.xml"
+    },
+    {
+        "merged": "com.loop.launcher.app-release-15:/drawable_ic_edit.xml.flat",
+        "source": "com.loop.launcher.app-main-16:/drawable/ic_edit.xml"
+    }
+]

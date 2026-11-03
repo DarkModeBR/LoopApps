@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="string" name="fontProviderSystemFontFamily"/>
+    <attr format="string" name="fontVariationSettings"/>
+    <attr format="reference" name="nestedScrollViewStyle"/>
+    <attr format="reference" name="recyclerViewStyle"/>
+    <color name="androidx_core_ripple_material_light">#1f000000</color>
+    <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
+    <color name="call_notification_answer_color">#1d873b</color>
+    <color name="call_notification_decline_color">#d93025</color>
+    <color name="notification_action_color_filter">@color/androidx_core_secondary_text_default_material_light</color>
+    <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
+    <dimen name="compat_button_inset_vertical_material">6dp</dimen>
+    <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
+    <dimen name="compat_button_padding_vertical_material">4dp</dimen>
+    <dimen name="compat_control_corner_material">2dp</dimen>
+    <dimen name="compat_notification_large_icon_max_height">320dp</dimen>
+    <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
+    <dimen name="fastscroll_default_thickness">8dp</dimen>
+    <dimen name="fastscroll_margin">0dp</dimen>
+    <dimen name="fastscroll_minimum_range">50dp</dimen>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="notification_action_icon_size">32dp</dimen>
+    <dimen name="notification_action_text_size">13sp</dimen>
+    <dimen name="notification_big_circle_margin">12dp</dimen>
+    <dimen name="notification_content_margin_start">0dp</dimen>
+    <dimen name="notification_large_icon_height">64dp</dimen>
+    <dimen name="notification_large_icon_width">64dp</dimen>
+    <dimen name="notification_main_column_padding_top">0dp</dimen>
+    <dimen name="notification_media_narrow_margin">12dp</dimen>
+    <dimen name="notification_right_icon_size">16dp</dimen>
+    <dimen name="notification_right_side_padding_top">4dp</dimen>
+    <dimen name="notification_small_icon_background_padding">3dp</dimen>
+    <dimen name="notification_small_icon_size_as_large">24dp</dimen>
+    <dimen name="notification_subtext_size">13sp</dimen>
+    <dimen name="notification_top_pad">10dp</dimen>
+    <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+    <item name="accessibility_action_clickable_span" type="id"/>
+    <item name="accessibility_custom_action_0" type="id"/>
+    <item name="accessibility_custom_action_1" type="id"/>
+    <item name="accessibility_custom_action_10" type="id"/>
+    <item name="accessibility_custom_action_11" type="id"/>
+    <item name="accessibility_custom_action_12" type="id"/>
+    <item name="accessibility_custom_action_13" type="id"/>
+    <item name="accessibility_custom_action_14" type="id"/>
+    <item name="accessibility_custom_action_15" type="id"/>
+    <item name="accessibility_custom_action_16" type="id"/>
+    <item name="accessibility_custom_action_17" type="id"/>
+    <item name="accessibility_custom_action_18" type="id"/>
+    <item name="accessibility_custom_action_19" type="id"/>
+    <item name="accessibility_custom_action_2" type="id"/>
+    <item name="accessibility_custom_action_20" type="id"/>
+    <item name="accessibility_custom_action_21" type="id"/>
+    <item name="accessibility_custom_action_22" type="id"/>
+    <item name="accessibility_custom_action_23" type="id"/>
+    <item name="accessibility_custom_action_24" type="id"/>
+    <item name="accessibility_custom_action_25" type="id"/>
+    <item name="accessibility_custom_action_26" type="id"/>
+    <item name="accessibility_custom_action_27" type="id"/>
+    <item name="accessibility_custom_action_28" type="id"/>
+    <item name="accessibility_custom_action_29" type="id"/>
+    <item name="accessibility_custom_action_3" type="id"/>
+    <item name="accessibility_custom_action_30" type="id"/>
+    <item name="accessibility_custom_action_31" type="id"/>
+    <item name="accessibility_custom_action_4" type="id"/>
+    <item name="accessibility_custom_action_5" type="id"/>
+    <item name="accessibility_custom_action_6" type="id"/>
+    <item name="accessibility_custom_action_7" type="id"/>
+    <item name="accessibility_custom_action_8" type="id"/>
+    <item name="accessibility_custom_action_9" type="id"/>
+    <item name="is_pooling_container_tag" type="id"/>
+    <item name="item_touch_helper_previous_elevation" type="id"/>
+    <item name="line1" type="id"/>
+    <item name="line3" type="id"/>
+    <item name="pooling_container_listener_holder_tag" type="id"/>
+    <item name="tag_accessibility_actions" type="id"/>
+    <item name="tag_accessibility_clickable_spans" type="id"/>
+    <item name="tag_accessibility_heading" type="id"/>
+    <item name="tag_accessibility_pane_title" type="id"/>
+    <item name="tag_compat_insets_dispatch" type="id"/>
+    <item name="tag_on_apply_window_listener" type="id"/>
+    <item name="tag_on_receive_content_listener" type="id"/>
+    <item name="tag_on_receive_content_mime_types" type="id"/>
+    <item name="tag_screen_reader_focusable" type="id"/>
+    <item name="tag_state_description" type="id"/>
+    <item name="tag_system_bar_state_monitor" type="id"/>
+    <item name="tag_transition_group" type="id"/>
+    <item name="tag_unhandled_key_event_manager" type="id"/>
+    <item name="tag_unhandled_key_listeners" type="id"/>
+    <item name="tag_window_insets_animation_callback" type="id"/>
+    <item name="text" type="id"/>
+    <item name="text2" type="id"/>
+    <item name="title" type="id"/>
+    <id name="view_tree_disjoint_parent"/>
+    <id name="view_tree_lifecycle_owner"/>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="about_creator">Loop Launcher was created by DarkModeBR.\ngithub.com/DarkModeBR/LoopApps</string>
+    <string name="about_creator_title">Creator</string>
+    <string name="about_credits">Weather data by Open-Meteo.com (CC BY 4.0). Location by GeoJS. Fonts Poppins, Barlow, Prompt and Oxygen (SIL Open Font License).</string>
+    <string name="about_credits_title">Credits</string>
+    <string name="about_license">Free software under the MIT license.</string>
+    <string name="about_license_title">License</string>
+    <string name="about_privacy">No ads and no usage data collection. To show the weather, GeoJS (location by IP) and Open-Meteo receive the IP address of this device. To check for updates, GitHub receives it too. You can turn off the weather and the update check in the settings.</string>
+    <string name="about_privacy_title">Privacy</string>
+    <string name="about_title">About Loop Launcher</string>
+    <string name="about_version">Version %s</string>
+    <string name="access_adb_run">Run from a computer or phone:</string>
+    <string name="access_adb_title">With an ADB command</string>
+    <string name="access_adb_undo">To undo:</string>
+    <string name="access_default_intro">This device did not let the launcher change this alone. Use one of the options below.</string>
+    <string name="access_default_title">Set as default launcher</string>
+    <string name="access_done">Done.</string>
+    <string name="access_failed">It did not work on this device. Try the ADB command.</string>
+    <string name="access_notifications_intro">This device did not let the launcher turn this on alone. Use one of the options below.</string>
+    <string name="access_notifications_title">Show notifications</string>
+    <string name="access_shizuku_title">With Shizuku</string>
+    <string name="action_save">Save</string>
+    <string name="androidx_startup" translatable="false">androidx.startup</string>
+    <string name="app_could_not_open">This app could not be opened.</string>
+    <string name="app_hidden_mark">Hidden</string>
+    <string name="app_name" translatable="false">Loop Launcher</string>
+    <string name="app_version">Version %1$s</string>
+    <string name="call_notification_answer_action">Answer</string>
+    <string name="call_notification_answer_video_action">Video</string>
+    <string name="call_notification_decline_action">Decline</string>
+    <string name="call_notification_hang_up_action">Hang Up</string>
+    <string name="call_notification_incoming_text">Incoming call</string>
+    <string name="call_notification_ongoing_text">Ongoing call</string>
+    <string name="call_notification_screening_text">Screening an incoming call</string>
+    <string name="capture_hint">Use it if Home opens another launcher even with this one as the default.</string>
+    <string name="capture_is_off">Off: the system decides what Home opens.</string>
+    <string name="capture_is_on">On: Home always opens this launcher.</string>
+    <string name="capture_service_description">Opens Loop Launcher when the Home button is pressed. It only listens to that button and reads nothing on the screen.</string>
+    <string name="capture_service_label">Loop: Home button</string>
+    <string name="capture_title">Capture the Home button</string>
+    <string name="capture_turn_off">Turn off with Shizuku</string>
+    <string name="capture_turn_on">Turn on with Shizuku</string>
+    <string name="capture_warning">It uses an accessibility service that only listens to the Home button and reads nothing on the screen. Holding Home also opens this launcher. System updates can block this.</string>
+    <string name="card_size_large">Large</string>
+    <string name="card_size_medium">Medium</string>
+    <string name="card_size_small">Small</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_appearance_detail">Theme, layout and language</string>
+    <string name="category_home">Home screen</string>
+    <string name="category_home_detail">Apps, categories and cards</string>
+    <string name="category_saver">Screensaver</string>
+    <string name="category_system">Launcher and system</string>
+    <string name="category_system_detail">Default launcher, notifications and updates</string>
+    <string name="category_top_bar">Top bar</string>
+    <string name="category_top_bar_detail">Buttons, clock, date and weather</string>
+    <string name="category_weather">Weather</string>
+    <string name="category_weather_detail">Show it, unit and city</string>
+    <string name="chip_power">Power</string>
+    <string name="chip_settings">Settings</string>
+    <string name="chip_status">Status</string>
+    <string name="chip_update">Update</string>
+    <string name="city_auto">Automatic (by IP)</string>
+    <string name="city_hint">Type the name of the city.</string>
+    <string name="city_not_found">City not found or no connection.</string>
+    <string name="city_use_auto">Use automatic location</string>
+    <string name="connection_cable">Wired</string>
+    <string name="connection_none">Offline</string>
+    <string name="connection_other">Network</string>
+    <string name="connection_wifi">Wi-Fi</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dim_light">Light</string>
+    <string name="dim_medium">Medium</string>
+    <string name="dim_none">None</string>
+    <string name="dim_strong">Strong</string>
+    <string name="files_permission_denied">Without this permission the launcher cannot read your files.</string>
+    <string name="font_auto">Automatic</string>
+    <string name="font_barlow">Barlow</string>
+    <string name="font_hint">The font changes across the whole launcher.</string>
+    <string name="font_oxygen">Oxygen</string>
+    <string name="font_poppins">Poppins</string>
+    <string name="font_prompt">Prompt</string>
+    <string name="googletv_disable">Disable original launcher</string>
+    <string name="googletv_title">Google TV: disable the original launcher</string>
+    <string name="googletv_warning">Another Google service may turn it back on, and the YouTube button on the remote may stop working. Use the undo command to reverse it.</string>
+    <string name="home_captured">Yes, but Home is captured</string>
+    <string name="home_lost_default">Loop Launcher is no longer the default launcher.</string>
+    <string name="home_no_apps">No apps to show yet.</string>
+    <string name="home_open_settings">Open settings</string>
+    <string name="home_section_cards">App cards</string>
+    <string name="home_section_organize">Organize</string>
+    <string name="language_en">English</string>
+    <string name="language_pt">Português</string>
+    <string name="language_system">Same as system</string>
+    <string name="layout_compact">Compact</string>
+    <string name="layout_highlight">Large clock</string>
+    <string name="menu_hide">Hide</string>
+    <string name="menu_info">App info</string>
+    <string name="menu_launcher_settings">Launcher settings</string>
+    <string name="menu_move">Move</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_rename">Rename</string>
+    <string name="menu_show">Show again</string>
+    <string name="menu_uninstall">Uninstall</string>
+    <string name="move_free">Move with the arrows</string>
+    <string name="move_hint">Moving %1$s. Arrows move it, OK drops it, Back cancels.</string>
+    <string name="move_to_category">To another category</string>
+    <string name="notifications_action_failed">This action could not be done.</string>
+    <string name="notifications_blocked_note">This device has low memory and Android blocks notification access, even with this command. Use Shizuku.</string>
+    <string name="notifications_clear_all">Clear all</string>
+    <string name="notifications_empty">No notifications.</string>
+    <string name="notifications_limited">On this device, removing only takes it off this list.</string>
+    <string name="notifications_lost">Notification access was turned off.</string>
+    <string name="notifications_off">Off</string>
+    <string name="notifications_on">On</string>
+    <string name="notifications_remove">Remove</string>
+    <string name="notifications_shizuku">Through Shizuku</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="override_note">%s keeps an accessibility service on and opens itself when you press Home. Turn that service off to make Home open Loop.</string>
+    <string name="override_open_settings">Open accessibility settings</string>
+    <string name="override_title">Another launcher is catching the Home button</string>
+    <string name="override_toast">%s is catching the Home button. See Settings › Launcher and system.</string>
+    <string name="override_turn_off">Turn it off with Shizuku</string>
+    <string name="power_needs_shizuku">Android only allows these actions through Shizuku or an ADB command.</string>
+    <string name="power_reboot">Restart</string>
+    <string name="power_reboot_note">The device restarts now. Apps that are open will close.</string>
+    <string name="power_shutdown">Turn off</string>
+    <string name="power_shutdown_note">The device turns off now. On some boxes it only comes back by unplugging it from the power.</string>
+    <string name="power_sleep">Sleep</string>
+    <string name="power_title">Power</string>
+    <string name="rename_field">App name</string>
+    <string name="rename_hint">The new name only appears inside the launcher.</string>
+    <string name="rename_restore">Use the original name</string>
+    <string name="saver_fullscreen">View the chosen model in full screen</string>
+    <string name="saver_hint">Go through the models to see a preview beside the menu.</string>
+    <string name="saver_minutes">%d min</string>
+    <string name="saver_off">Off</string>
+    <string name="saver_preview">Preview</string>
+    <string name="saver_section_models">Model</string>
+    <string name="saver_style_clock">Clock</string>
+    <string name="saver_style_dvd">DVD logo</string>
+    <string name="saver_style_rain">Falling letters</string>
+    <string name="saver_system_fallback">This device has no direct path. Look for Screen saver in the settings.</string>
+    <string name="saver_system_note">While another app is open, the screensaver chosen in the device settings applies. Choose Loop there to use this one everywhere.</string>
+    <string name="saver_system_open">Open device screensaver settings</string>
+    <string name="saver_system_section">Outside the home screen</string>
+    <string name="saver_title">Loop screensaver</string>
+    <string name="screen_unavailable">This device does not have that screen.</string>
+    <string name="settings_about">About</string>
+    <string name="settings_all_apps">All apps</string>
+    <string name="settings_app_name">Big app name</string>
+    <string name="settings_card_size">App size</string>
+    <string name="settings_city">City</string>
+    <string name="settings_font">Font</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_layout">Layout</string>
+    <string name="settings_network">Wi-Fi and network</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_organize_trays">Organize categories</string>
+    <string name="settings_saver">Start after idle for</string>
+    <string name="settings_set_default">Set as default launcher</string>
+    <string name="settings_system">System settings</string>
+    <string name="settings_temp_unit">Temperature</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_tray_names">Category names</string>
+    <string name="settings_updates">Check for updates</string>
+    <string name="settings_wallpaper">Wallpaper</string>
+    <string name="settings_weather">Show weather</string>
+    <string name="shizuku_apply">Apply</string>
+    <string name="shizuku_authorize">Authorize</string>
+    <string name="shizuku_needs_permission">Shizuku is running and needs your authorization.</string>
+    <string name="shizuku_not_installed">Shizuku is not installed. Install it from shizuku.rikka.app, start it, and come back.</string>
+    <string name="shizuku_not_running">Shizuku is not running. Open it and follow its start instructions.</string>
+    <string name="shizuku_open">Open Shizuku</string>
+    <string name="shizuku_ready">Shizuku is ready.</string>
+    <string name="shizuku_unsupported">This Shizuku version is too old. Update it.</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="status_cpu">Processor</string>
+    <string name="status_memory">Memory</string>
+    <string name="status_storage">Storage</string>
+    <string name="status_title">Device status</string>
+    <string name="status_uptime">On for</string>
+    <string name="storage_internal">Device storage</string>
+    <string name="storage_usb">Pen drive or memory card</string>
+    <string name="theme_android_google_tv">Android TV / Google TV</string>
+    <string name="theme_app_color">App color</string>
+    <string name="theme_apple_tv">Apple TV</string>
+    <string name="theme_atv_launcher">ATV Launcher</string>
+    <string name="theme_hint">The look changes as soon as you choose.</string>
+    <string name="theme_mi_tv_box">Mi TV Box</string>
+    <string name="theme_omarchy_tv">OmarchyTV</string>
+    <string name="top_bar_buttons">Buttons</string>
+    <string name="top_bar_clock">Clock</string>
+    <string name="top_bar_date">Date</string>
+    <string name="top_bar_information">Information</string>
+    <string name="top_bar_labels">Text on the buttons</string>
+    <string name="top_bar_move_left">Move left</string>
+    <string name="top_bar_move_right">Move right</string>
+    <string name="top_bar_network_name">Network name</string>
+    <string name="top_bar_order">Button order</string>
+    <string name="top_bar_order_hint">From left to right on the screen.</string>
+    <string name="top_bar_settings_hidden">With Settings hidden, hold OK on an app and choose Launcher settings.</string>
+    <string name="top_bar_text">Text</string>
+    <string name="topbar_network">Network</string>
+    <string name="topbar_notifications">Notifications</string>
+    <string name="topbar_usb">USB devices</string>
+    <string name="tray_app_count">Apps: %d</string>
+    <string name="tray_apps">Apps in this category</string>
+    <string name="tray_apps_hint">OK turns an app on or off. The right arrow or holding OK changes its category.</string>
+    <string name="tray_apps_hint_other">Every app needs a category: turning one off here asks where it goes.</string>
+    <string name="tray_change_category">Choose the category of this app.</string>
+    <string name="tray_create">Create category</string>
+    <string name="tray_delete">Delete</string>
+    <string name="tray_delete_note">Its apps go to Other.</string>
+    <string name="tray_down">Move down</string>
+    <string name="tray_favorites">Favorites</string>
+    <string name="tray_games">Games</string>
+    <string name="tray_movies">Movies and series</string>
+    <string name="tray_music">Music</string>
+    <string name="tray_name_city">City name</string>
+    <string name="tray_name_hint">Category name</string>
+    <string name="tray_other">Other</string>
+    <string name="tray_rename">Rename</string>
+    <string name="tray_up">Move up</string>
+    <string name="trays_hint">Choose a category to change its apps, name or position, or to delete it.</string>
+    <string name="update_downloading">Downloading the update…</string>
+    <string name="update_failed">The update could not be downloaded.</string>
+    <string name="update_install">Download and install</string>
+    <string name="update_later">Later</string>
+    <string name="update_title">Version %s is available</string>
+    <string name="usb_device">USB device</string>
+    <string name="value_no">No</string>
+    <string name="value_off">Off</string>
+    <string name="value_on">On</string>
+    <string name="value_yes">Yes</string>
+    <string name="wallpaper_add">Add from device or pen drive</string>
+    <string name="wallpaper_add_hint">Images, GIF and MP4 video.</string>
+    <string name="wallpaper_broken">This wallpaper could not be opened. Showing the theme background.</string>
+    <string name="wallpaper_copy_failed">This file could not be copied. It may be too large (limit 500 MB) or there is no free space.</string>
+    <string name="wallpaper_copying">Copying…</string>
+    <string name="wallpaper_dim">Darken wallpaper</string>
+    <string name="wallpaper_dim_hint">Helps text and buttons stand out.</string>
+    <string name="wallpaper_dunes_amber">Amber dunes</string>
+    <string name="wallpaper_dunes_arctic">Arctic dunes</string>
+    <string name="wallpaper_dunes_emerald">Emerald dunes</string>
+    <string name="wallpaper_dunes_ocean">Ocean dunes</string>
+    <string name="wallpaper_dunes_rose">Rose dunes</string>
+    <string name="wallpaper_dunes_ruby">Ruby dunes</string>
+    <string name="wallpaper_dunes_sunset">Sunset dunes</string>
+    <string name="wallpaper_dunes_violet">Violet dunes</string>
+    <string name="wallpaper_folder_empty">No folders or wallpapers here.</string>
+    <string name="wallpaper_hint">Choose and see it right away behind this menu.</string>
+    <string name="wallpaper_in_use">In use</string>
+    <string name="wallpaper_included">Included</string>
+    <string name="wallpaper_kind_image">Image</string>
+    <string name="wallpaper_kind_video">Video</string>
+    <string name="wallpaper_none">Theme background</string>
+    <string name="wallpaper_remove">Remove from launcher</string>
+    <string name="wallpaper_use">Use this wallpaper</string>
+    <string name="wallpaper_yours">Your wallpapers</string>
+    <string name="weather_clear">Clear</string>
+    <string name="weather_cloudy">Cloudy</string>
+    <string name="weather_drizzle">Drizzle</string>
+    <string name="weather_fog">Fog</string>
+    <string name="weather_partly_cloudy">Partly cloudy</string>
+    <string name="weather_rain">Rain</string>
+    <string name="weather_snow">Snow</string>
+    <string name="weather_thunder">Thunderstorm</string>
+    <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.Material.Notification"/>
+    <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Time" parent="@android:style/TextAppearance.Material.Notification.Time"/>
+    <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title"/>
+    <style name="Theme.Loop" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.Loop.Menu" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:colorControlHighlight">#33FFFFFF</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionContainer" parent="">
+        <item name="android:background">@drawable/notification_action_background</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionText" parent="">
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:textColor">@color/androidx_core_secondary_text_default_material_light</item>
+        <item name="android:textSize">@dimen/notification_action_text_size</item>
+    </style>
+    <declare-styleable name="Capability">
+        
+        <attr format="reference" name="queryPatterns"/>
+        
+        <attr format="boolean" name="shortcutMatchRequired"/>
+    </declare-styleable>
+    <declare-styleable name="ColorStateListItem">
+        
+        <attr name="android:color"/>
+        
+        <attr format="float" name="alpha"/>
+        <attr name="android:alpha"/>
+        
+        <attr format="float" name="lStar"/>
+        <attr name="android:lStar"/>
+    </declare-styleable>
+    <declare-styleable name="FontFamily">
+        
+        <attr format="string" name="fontProviderAuthority"/>
+        
+        <attr format="string" name="fontProviderPackage"/>
+        
+        <attr format="string" name="fontProviderQuery"/>
+        
+        <attr format="string" name="fontProviderFallbackQuery"/>
+        
+        <attr format="reference" name="fontProviderCerts"/>
+        
+        <attr name="fontProviderFetchStrategy">
+            <!-- The blocking font fetch works as follows.
+              First, check the local cache, then if the requested font is not cached, request the
+              font from the provider and wait until it is finished.  You can change the length of
+              the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
+              default typeface will be used instead. -->
+            <enum name="blocking" value="0"/>
+            <!-- The async font fetch works as follows.
+              First, check the local cache, then if the requested font is not cached, trigger a
+              request the font and continue with layout inflation. Once the font fetch succeeds, the
+              target text view will be refreshed with the downloaded font data. The
+              fontProviderFetchTimeout will be ignored if async loading is specified. -->
+            <enum name="async" value="1"/>
+        </attr>
+        
+        <attr format="integer" name="fontProviderFetchTimeout">
+            <!-- A special value for the timeout. In this case, the blocking font fetching will not
+              timeout and wait until a reply is received from the font provider. -->
+            <enum name="forever" value="-1"/>
+        </attr>
+        
+        <attr name="fontProviderSystemFontFamily"/>
+    </declare-styleable>
+    <declare-styleable name="FontFamilyFont">
+        
+        <attr name="fontStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+        </attr>
+        
+        <attr format="reference" name="font"/>
+        
+        <attr format="integer" name="fontWeight"/>
+        
+        <attr name="fontVariationSettings"/>
+        
+        <attr format="integer" name="ttcIndex"/>
+        
+        <attr name="android:fontStyle"/>
+        <attr name="android:font"/>
+        <attr name="android:fontWeight"/>
+        <attr name="android:fontVariationSettings"/>
+        <attr name="android:ttcIndex"/>
+    </declare-styleable>
+    <declare-styleable name="FontFamilyProviderFallback">
+        
+        <attr name="fontProviderQuery"/>
+        
+        <attr name="fontProviderSystemFontFamily"/>
+        
+        <attr name="fontVariationSettings"/>
+    </declare-styleable>
+    <declare-styleable name="GradientColor">
+        
+        <attr name="android:startColor"/>
+        
+        <attr name="android:centerColor"/>
+        
+        <attr name="android:endColor"/>
+        
+        <attr name="android:type"/>
+
+        
+        
+        <attr name="android:gradientRadius"/>
+
+        
+        
+        <attr name="android:centerX"/>
+        
+        <attr name="android:centerY"/>
+
+        
+        
+        <attr name="android:startX"/>
+        
+        <attr name="android:startY"/>
+        
+        <attr name="android:endX"/>
+        
+        <attr name="android:endY"/>
+
+        
+        <attr name="android:tileMode"/>
+    </declare-styleable>
+    <declare-styleable name="GradientColorItem">
+        
+        <attr name="android:offset"/>
+        
+        <attr name="android:color"/>
+    </declare-styleable>
+    <declare-styleable name="RecyclerView">
+        
+        <attr format="string" name="layoutManager"/>
+
+        
+        
+        
+        <eat-comment/>
+
+        <attr name="android:orientation"/>
+        <attr name="android:descendantFocusability"/>
+        <attr name="android:clipToPadding"/>
+        <attr format="integer" name="spanCount"/>
+        <attr format="boolean" name="reverseLayout"/>
+        <attr format="boolean" name="stackFromEnd"/>
+        <attr format="boolean" name="fastScrollEnabled"/>
+        <attr format="reference" name="fastScrollVerticalThumbDrawable"/>
+        <attr format="reference" name="fastScrollVerticalTrackDrawable"/>
+        <attr format="reference" name="fastScrollHorizontalThumbDrawable"/>
+        <attr format="reference" name="fastScrollHorizontalTrackDrawable"/>
+    </declare-styleable>
+</resources>

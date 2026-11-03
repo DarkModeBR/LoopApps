@@ -1,0 +1,288 @@
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\update\UpdateInstaller.kt:44: Warning: Field requires API level 26 (current min is 24): android.provider.Settings#ACTION_MANAGE_UNKNOWN_APP_SOURCES [InlinedApi]
+            Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse("package:${activity.packageName}")),
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InlinedApi":
+   This check scans through all the Android API field references in the
+   application and flags certain constants, such as static final integers and
+   Strings, which were introduced in later versions. These will actually be
+   copied into the class files rather than being referenced, which means that
+   the value is available even when running on older devices. In some cases
+   that's fine, and in other cases it can result in a runtime crash or
+   incorrect behavior. It depends on the context, so consider the code
+   carefully and decide whether it's safe and can be suppressed or whether the
+   code needs to be guarded.
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\ui\BaseActivity.kt:28: Warning: Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the bundle configuration [AppBundleLocaleChanges]
+            config.setLocale(Locale.forLanguageTag(currentLanguage(base)))
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AppBundleLocaleChanges":
+   When changing locales at runtime (e.g. to provide an in-app language
+   switcher), the Android App Bundle must be configured to not split by locale
+   or the Play Core library must be used to download additional locales at
+   runtime.
+
+   https://developer.android.com/guide/app-bundle/configure-base#handling_language_changes
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:9: Warning: Your app is currently not handling Selected Photos Access introduced in Android 14+ [SelectedPhotoAccess]
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:10: Warning: Your app is currently not handling Selected Photos Access introduced in Android 14+ [SelectedPhotoAccess]
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SelectedPhotoAccess":
+   Selected Photo Access is a new ability for users to share partial access to
+   their photo library when apps request access to their device storage on
+   Android 14+.
+
+   Instead of letting the system manage the selection lifecycle, we recommend
+   you adapt your app to handle partial access to the photo library.
+
+   https://developer.android.com/about/versions/14/changes/partial-photo-video-access
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:49: Warning: Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios. [DiscouragedApi]
+            android:screenOrientation="landscape"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:33: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+        android:allowBackup="false"
+                             ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\AppCardAdapter.kt:44: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged()
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\ui\menu\MenuAdapter.kt:40: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged()
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\TrayAdapter.kt:35: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged()
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res\mipmap-hdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res\mipmap-mdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res\mipmap-xhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res\mipmap-xxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://d.android.com/r/studio-ui/designer/material/iconography) your
+   launcher icons should "use a distinct silhouette", a "three-dimensional,
+   front view, with a slight perspective as if viewed from above, so that
+   users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   The system may use the coloring of the user's chosen wallpaper and theme to
+   tint app icons. Providing a <monochrome> layer (which will be used for
+   tinting) for every adaptive icon is strongly recommended, otherwise Android
+   16 QPR 2 and above will simply tint the color version of the icon, which
+   may look unusual. Devices running earlier Android versions will (with no
+   monochrome layer) show the untinted color icon for your app, which will
+   look inconsistent.
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res: Warning: Missing density variation folders in src\main\res: drawable-hdpi, drawable-mdpi, drawable-xxhdpi [IconMissingDensityFolder]
+
+   Explanation for issues of type "IconMissingDensityFolder":
+   Icons will look best if a custom version is provided for each of the major
+   screen density classes (low, medium, high, extra-high, extra-extra-high).
+   This lint check identifies folders which are missing, such as
+   drawable-hdpi.
+
+   Low density is not really used much anymore, so this check ignores the ldpi
+   density. To force lint to include it, set the environment variable
+   ANDROID_LINT_INCLUDE_LDPI=true. For more information on current density
+   usage, see https://developer.android.com/about/dashboards
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\ChipView.kt:16: Warning: Custom view ChipView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class ChipView(context: Context, metrics: HomeMetrics, private val theme: ThemeDefinition) : LinearLayout(context) {
+      ~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\HeaderView.kt:19: Warning: Custom view HeaderView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class HeaderView(
+      ~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\ui\menu\MenuWidgets.kt:13: Warning: Custom view SwitchView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class SwitchView(context: Context, private val square: Boolean) : View(context) {
+      ~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\ui\menu\MenuWidgets.kt:67: Warning: Custom view RadioView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class RadioView(context: Context, private val square: Boolean) : View(context) {
+      ~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\ui\menu\MenuWidgets.kt:96: Warning: Custom view SwatchView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class SwatchView(context: Context, private val square: Boolean) : View(context) {
+      ~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\screensaver\SaverView.kt:35: Warning: Custom view SaverView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class SaverView(context: Context, preview: Boolean = false) : FrameLayout(context) {
+      ~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\wallpaper\WallpaperLayer.kt:35: Warning: Custom view WallpaperLayer is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+class WallpaperLayer(
+      ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ViewConstructor":
+   Some layout tools (such as the Android layout editor) need to find a
+   constructor with one of the following signatures:
+   * View(Context context)
+   * View(Context context, AttributeSet attrs)
+   * View(Context context, AttributeSet attrs, int defStyle)
+
+   If your custom view needs to perform initialization which does not apply
+   when used in a layout editor, you can surround the given code with a check
+   to see if View#isInEditMode() is false, since that method will return false
+   at runtime but true within a user interface editor.
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\apps\AppMenus.kt:68: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:${app.packageName}")),
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\apps\AppMenus.kt:72: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                menu.openOrWarn(Intent(Intent.ACTION_DELETE, Uri.parse("package:${app.packageName}")))
+                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\CardArtLoader.kt:57: Warning: Use the KTX function createBitmap instead? [UseKtx]
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\ChipView.kt:74: Warning: Use the KTX extension property View.isVisible instead? [UseKtx]
+        val hasContent = label.visibility == View.VISIBLE || badge.visibility == View.VISIBLE
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\ChipView.kt:74: Warning: Use the KTX extension property View.isVisible instead? [UseKtx]
+        val hasContent = label.visibility == View.VISIBLE || badge.visibility == View.VISIBLE
+                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\HeaderView.kt:103: Warning: Use the KTX extension property View.isVisible instead? [UseKtx]
+        (0 until chips.childCount).map { chips.getChildAt(it) }.filter { it.visibility == View.VISIBLE }
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\ui\menu\MenuAdapter.kt:331: Warning: Use the KTX extension function Int.toDrawable instead? [UseKtx]
+        private val fill = ClipDrawable(ColorDrawable(style.accent), Gravity.START, ClipDrawable.HORIZONTAL)
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\notifications\NotificationsMenuActivity.kt:29: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            prefs.edit().putStringSet(KEY_DISMISSED, it).apply()
+            ~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\screensaver\SaverViews.kt:111: Warning: Use the KTX function createBitmap instead? [UseKtx]
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\update\UpdateInstaller.kt:44: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse("package:${activity.packageName}")),
+                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\wallpaper\WallpaperLayer.kt:266: Warning: Use the KTX extension function Canvas.withScale instead? [UseKtx]
+            canvas.save()
+            ~~~~~~~~~~~~~
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\wallpaper\WallpaperThumbs.kt:70: Warning: Use the KTX extension function Bitmap.scale instead? [UseKtx]
+            Bitmap.createScaledBitmap(frame, THUMB_WIDTH, height.coerceAtLeast(1), true).also {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\java\com\loop\launcher\home\ChipView.kt:67: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+        badge.text = count.toString()
+                     ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 36 warnings

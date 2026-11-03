@@ -1,0 +1,2083 @@
+{
+    "$schema" : "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+    "version" : "2.1.0",
+    "runs" : [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Android Lint",
+                    "fullName": "Android Lint (in gradle)",
+                    "version": "9.5.0",
+                    "semanticVersion": "9.5.0",
+                    "organization": "Google",
+                    "informationUri": "https://developer.android.com/studio/write/lint",
+                    "fullDescription": {
+                        "text": "Static analysis originally for Android source code but now performing general analysis"
+                    },
+                    "language": "en-US",
+                    "rules": [
+                        {
+                            "id": "AppBundleLocaleChanges",
+                            "shortDescription": {
+                                "text": "App Bundle handling of runtime locale changes"
+                            },
+                            "fullDescription": {
+                                "text": "When changing locales at runtime (e.g. to provide an in-app language switcher), the Android App Bundle must be configured to not split by locale or the Play Core library must be used to download additional locales at runtime."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 60
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Correctness"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "DataExtractionRules",
+                            "shortDescription": {
+                                "text": "Missing data extraction rules"
+                            },
+                            "fullDescription": {
+                                "text": "Before Android 12, the attributes android:allowBackup and android:fullBackupContent were used to configure all forms of backup, including cloud backups, device-to-device transfers and adb backup.\n\nIn Android 12 and higher, these attributes have been deprecated and will only apply to cloud backups. You should instead use the attribute android:dataExtractionRules, specifying an @xml resource that configures which files to back up, for cloud backups and for device-to-device transfers, separately. If your minSdkVersion supports older versions, you'll still want to specify an android:fullBackupContent resource if the default behavior is not right for your app.",
+                                "markdown": "Before Android 12, the attributes `android:allowBackup` and `android:fullBackupContent` were used to configure all forms of backup, including cloud backups, device-to-device transfers and adb backup.\n\nIn Android 12 and higher, these attributes have been deprecated and will only apply to cloud backups. You should instead use the attribute `android:dataExtractionRules`, specifying an `@xml` resource that configures which files to back up, for cloud backups and for device-to-device transfers, separately. If your `minSdkVersion` supports older versions, you'll still want to specify an `android:fullBackupContent` resource if the default behavior is not right for your app."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 80
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Security"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "DiscouragedApi",
+                            "shortDescription": {
+                                "text": "Using discouraged APIs"
+                            },
+                            "fullDescription": {
+                                "text": "Discouraged APIs are allowed and are not deprecated, but they may be unfit for common use (e.g. due to slow performance or subtle behavior)."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 90
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Correctness"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "IconLauncherShape",
+                            "shortDescription": {
+                                "text": "The launcher icon shape should use a distinct silhouette"
+                            },
+                            "fullDescription": {
+                                "text": "According to the Android Design Guide (https://d.android.com/r/studio-ui/designer/material/iconography) your launcher icons should \"use a distinct silhouette\", a \"three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.\"\n\nThe unique silhouette implies that your launcher icon should not be a filled square."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Icons",
+                                    "Usability"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "IconMissingDensityFolder",
+                            "shortDescription": {
+                                "text": "Missing density folder"
+                            },
+                            "fullDescription": {
+                                "text": "Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as drawable-hdpi.\n\nLow density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable ANDROID_LINT_INCLUDE_LDPI=true. For more information on current density usage, see https://developer.android.com/about/dashboards",
+                                "markdown": "Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.\n\nLow density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see https://developer.android.com/about/dashboards"
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 80
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Icons",
+                                    "Usability"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "InlinedApi",
+                            "shortDescription": {
+                                "text": "Using inlined constants on older versions"
+                            },
+                            "fullDescription": {
+                                "text": "This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that's fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and decide whether it's safe and can be suppressed or whether the code needs to be guarded.\n\nIf you really want to use this API and don't need to support older devices just set the minSdkVersion in your build.gradle or AndroidManifest.xml files.\n\nIf your code is deliberately accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the @TargetApi annotation specifying the local minimum SDK to apply, such as @TargetApi(11), such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.",
+                                "markdown": "This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that's fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and decide whether it's safe and can be suppressed or whether the code needs to be guarded.\n\nIf you really want to use this API and don't need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.\n\nIf your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Correctness"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "MonochromeLauncherIcon",
+                            "shortDescription": {
+                                "text": "Monochrome icon is not defined"
+                            },
+                            "fullDescription": {
+                                "text": "The system may use the coloring of the user's chosen wallpaper and theme to tint app icons. Providing a <monochrome> layer (which will be used for tinting) for every adaptive icon is strongly recommended, otherwise Android 16 QPR 2 and above will simply tint the color version of the icon, which may look unusual. Devices running earlier Android versions will (with no monochrome layer) show the untinted color icon for your app, which will look inconsistent.",
+                                "markdown": "The system may use the coloring of the user's chosen wallpaper and theme to tint app icons. Providing a `<monochrome>` layer (which will be used for tinting) for every adaptive icon is strongly recommended, otherwise Android 16 QPR 2 and above will simply tint the color version of the icon, which may look unusual. Devices running earlier Android versions will (with no monochrome layer) show the untinted color icon for your app, which will look inconsistent."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Icons",
+                                    "Usability"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "NotifyDataSetChanged",
+                            "shortDescription": {
+                                "text": "Invalidating All RecyclerView Data"
+                            },
+                            "fullDescription": {
+                                "text": "The RecyclerView adapter's onNotifyDataSetChanged method does not specify what about the data set has changed, forcing any observers to assume that all existing items and structure may no longer be valid. `LayoutManager`s will be forced to fully rebind and relayout all visible views.",
+                                "markdown": "The `RecyclerView` adapter's `onNotifyDataSetChanged` method does not specify what about the data set has changed, forcing any observers to assume that all existing items and structure may no longer be valid. `LayoutManager`s will be forced to fully rebind and relayout all visible views."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 30
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Performance"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "SelectedPhotoAccess",
+                            "shortDescription": {
+                                "text": "Behavior change when requesting photo library access"
+                            },
+                            "fullDescription": {
+                                "text": "Selected Photo Access is a new ability for users to share partial access to their photo library when apps request access to their device storage on Android 14+.\n\nInstead of letting the system manage the selection lifecycle, we recommend you adapt your app to handle partial access to the photo library."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 60
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Correctness"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "SetTextI18n",
+                            "shortDescription": {
+                                "text": "TextView Internationalization"
+                            },
+                            "fullDescription": {
+                                "text": "When calling TextView#setText\n* Never call Number#toString() to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using String#format with proper format specifications (%d or %f) instead.\n* Do not pass a string literal (e.g. \"Hello\") to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.\n* Do not build messages by concatenating text chunks. Such messages can not be properly translated.",
+                                "markdown": "When calling `TextView#setText`\n* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.\n* Do not pass a string literal (e.g. \"Hello\") to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.\n* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Internationalization"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "UseKtx",
+                            "shortDescription": {
+                                "text": "Use KTX extension function"
+                            },
+                            "fullDescription": {
+                                "text": "The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Productivity"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ViewConstructor",
+                            "shortDescription": {
+                                "text": "Missing View constructors for XML inflation"
+                            },
+                            "fullDescription": {
+                                "text": "Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:\n* View(Context context)\n* View(Context context, AttributeSet attrs)\n* View(Context context, AttributeSet attrs, int defStyle)\n\nIf your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if View#isInEditMode() is false, since that method will return false at runtime but true within a user interface editor.",
+                                "markdown": "Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:\n* `View(Context context)`\n* `View(Context context, AttributeSet attrs)`\n* `View(Context context, AttributeSet attrs, int defStyle)`\n\nIf your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 80
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Usability"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "originalUriBaseIds": {
+                "%SRCROOT%": {
+                    "uri": "file:///C:/Users/Administrator/Desktop/Ravager%20Launcher/"
+                }
+            },
+            "results": [
+                {
+                    "ruleId": "InlinedApi",
+                    "ruleIndex": 5,
+                    "message": {
+                        "text": "Field requires API level 26 (current min is 24): android.provider.Settings#ACTION_MANAGE_UNKNOWN_APP_SOURCES",
+                        "markdown": "Field requires API level 26 (current min is 24): `android.provider.Settings#ACTION_MANAGE_UNKNOWN_APP_SOURCES`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/update/UpdateInstaller.kt"
+                                },
+                                "region": {
+                                    "startLine": 44,
+                                    "startColumn": 20,
+                                    "endLine": 44,
+                                    "endColumn": 62,
+                                    "charOffset": 1646,
+                                    "charLength": 42,
+                                    "snippet": {
+                                        "text": "Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 42,
+                                    "endLine": 47,
+                                    "snippet": {
+                                        "text": "    override fun openPermissionScreen(): Boolean = opened {\n        activity.startActivity(\n            Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse(\"package:${activity.packageName}\")),\n        )\n    }\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "ef14b13ca4457994"
+                    }
+                },
+                {
+                    "ruleId": "AppBundleLocaleChanges",
+                    "ruleIndex": 0,
+                    "message": {
+                        "text": "Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the bundle configuration",
+                        "markdown": "Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the `bundle` configuration"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/ui/BaseActivity.kt"
+                                },
+                                "region": {
+                                    "startLine": 28,
+                                    "startColumn": 13,
+                                    "endLine": 28,
+                                    "endColumn": 75,
+                                    "charOffset": 1089,
+                                    "charLength": 62,
+                                    "snippet": {
+                                        "text": "config.setLocale(Locale.forLanguageTag(currentLanguage(base)))"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 26,
+                                    "endLine": 31,
+                                    "snippet": {
+                                        "text": "        fun localized(base: Context): Context {\n            val config = Configuration(base.resources.configuration)\n            config.setLocale(Locale.forLanguageTag(currentLanguage(base)))\n            return base.createConfigurationContext(config)\n        }\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "b95ae8e23b17bc4b"
+                    }
+                },
+                {
+                    "ruleId": "SelectedPhotoAccess",
+                    "ruleIndex": 8,
+                    "message": {
+                        "text": "Your app is currently not handling Selected Photos Access introduced in Android 14+"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/AndroidManifest.xml"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "startColumn": 36,
+                                    "endLine": 9,
+                                    "endColumn": 72,
+                                    "charOffset": 563,
+                                    "charLength": 36,
+                                    "snippet": {
+                                        "text": "android.permission.READ_MEDIA_IMAGES"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 7,
+                                    "endLine": 12,
+                                    "snippet": {
+                                        "text": "    <uses-permission android:name=\"android.permission.REQUEST_DELETE_PACKAGES\" />\n    <uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" android:maxSdkVersion=\"32\" />\n    <uses-permission android:name=\"android.permission.READ_MEDIA_IMAGES\" />\n    <uses-permission android:name=\"android.permission.READ_MEDIA_VIDEO\" />\n\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "01f717914254f4e8"
+                    }
+                },
+                {
+                    "ruleId": "SelectedPhotoAccess",
+                    "ruleIndex": 8,
+                    "message": {
+                        "text": "Your app is currently not handling Selected Photos Access introduced in Android 14+"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/AndroidManifest.xml"
+                                },
+                                "region": {
+                                    "startLine": 10,
+                                    "startColumn": 36,
+                                    "endLine": 10,
+                                    "endColumn": 71,
+                                    "charOffset": 639,
+                                    "charLength": 35,
+                                    "snippet": {
+                                        "text": "android.permission.READ_MEDIA_VIDEO"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 8,
+                                    "endLine": 13,
+                                    "snippet": {
+                                        "text": "    <uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" android:maxSdkVersion=\"32\" />\n    <uses-permission android:name=\"android.permission.READ_MEDIA_IMAGES\" />\n    <uses-permission android:name=\"android.permission.READ_MEDIA_VIDEO\" />\n\n    <uses-feature android:name=\"android.software.leanback\" android:required=\"false\" />\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "7abc736232ef2570"
+                    }
+                },
+                {
+                    "ruleId": "DiscouragedApi",
+                    "ruleIndex": 2,
+                    "message": {
+                        "text": "Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/AndroidManifest.xml"
+                                },
+                                "region": {
+                                    "startLine": 49,
+                                    "startColumn": 13,
+                                    "endLine": 49,
+                                    "endColumn": 50,
+                                    "charOffset": 2264,
+                                    "charLength": 37,
+                                    "snippet": {
+                                        "text": "android:screenOrientation=\"landscape\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 47,
+                                    "endLine": 52,
+                                    "snippet": {
+                                        "text": "            android:launchMode=\"singleTask\"\n            android:resumeWhilePausing=\"true\"\n            android:screenOrientation=\"landscape\"\n            android:stateNotNeeded=\"true\">\n            <intent-filter>\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "8ff2b25a38e7465a"
+                    }
+                },
+                {
+                    "ruleId": "DataExtractionRules",
+                    "ruleIndex": 1,
+                    "message": {
+                        "text": "The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher.",
+                        "markdown": "The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/AndroidManifest.xml"
+                                },
+                                "region": {
+                                    "startLine": 33,
+                                    "startColumn": 30,
+                                    "endLine": 33,
+                                    "endColumn": 35,
+                                    "charOffset": 1592,
+                                    "charLength": 5,
+                                    "snippet": {
+                                        "text": "false"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 31,
+                                    "endLine": 36,
+                                    "snippet": {
+                                        "text": "\n    <application\n        android:allowBackup=\"false\"\n        android:requestLegacyExternalStorage=\"true\"\n        android:banner=\"@drawable/banner\"\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Create data_extraction_rules.xml"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/res/xml/data_extraction_rules.xml"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 1,
+                                                "startColumn": 1,
+                                                "charOffset": 0
+                                            },
+                                            "insertedContent": {
+                                                "text": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!--\n   Sample data extraction rules file; uncomment and customize as necessary.\n   See https://developer.android.com/about/versions/12/backup-restore#xml-changes\n   for details.\n-->\n<data-extraction-rules>\n    <cloud-backup>\n        <!--\n        TODO: Use <include> and <exclude> to control what is backed up.\n        The domain can be file, database, sharedpref, external or root.\n        Examples:\n\n        <include domain=\"file\" path=\"file_to_include\"/>\n        <exclude domain=\"file\" path=\"file_to_exclude\"/>\n        <include domain=\"file\" path=\"include_folder\"/>\n        <exclude domain=\"file\" path=\"include_folder/file_to_exclude\"/>\n        <exclude domain=\"file\" path=\"exclude_folder\"/>\n        <include domain=\"file\" path=\"exclude_folder/file_to_include\"/>\n\n        <include domain=\"sharedpref\" path=\"include_shared_pref1.xml\"/>\n        <include domain=\"database\" path=\"db_name/file_to_include\"/>\n        <exclude domain=\"database\" path=\"db_name/include_folder/file_to_exclude\"/>\n        <include domain=\"external\" path=\"file_to_include\"/>\n        <exclude domain=\"external\" path=\"file_to_exclude\"/>\n        <include domain=\"root\" path=\"file_to_include\"/>\n        <exclude domain=\"root\" path=\"file_to_exclude\"/>\n        -->\n    </cloud-backup>\n    <!--\n    <device-transfer>\n        <include .../>\n        <exclude .../>\n    </device-transfer>\n    -->\n</data-extraction-rules>"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/AndroidManifest.xml"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 34,
+                                                "startColumn": 9,
+                                                "charOffset": 1607
+                                            },
+                                            "insertedContent": {
+                                                "text": "android:dataExtractionRules=\"@xml/data_extraction_rules\" "
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "fdb00e3677b38b15"
+                    }
+                },
+                {
+                    "ruleId": "NotifyDataSetChanged",
+                    "ruleIndex": 7,
+                    "message": {
+                        "text": "It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort.",
+                        "markdown": "It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/AppCardAdapter.kt"
+                                },
+                                "region": {
+                                    "startLine": 44,
+                                    "startColumn": 9,
+                                    "endLine": 44,
+                                    "endColumn": 31,
+                                    "charOffset": 1337,
+                                    "charLength": 22,
+                                    "snippet": {
+                                        "text": "notifyDataSetChanged()"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 42,
+                                    "endLine": 47,
+                                    "snippet": {
+                                        "text": "        trayIndex = index\n        entries = apps\n        notifyDataSetChanged()\n    }\n\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "4de1d3852847231e"
+                    }
+                },
+                {
+                    "ruleId": "NotifyDataSetChanged",
+                    "ruleIndex": 7,
+                    "message": {
+                        "text": "It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort.",
+                        "markdown": "It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/ui/menu/MenuAdapter.kt"
+                                },
+                                "region": {
+                                    "startLine": 40,
+                                    "startColumn": 9,
+                                    "endLine": 40,
+                                    "endColumn": 31,
+                                    "charOffset": 1268,
+                                    "charLength": 22,
+                                    "snippet": {
+                                        "text": "notifyDataSetChanged()"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 38,
+                                    "endLine": 43,
+                                    "snippet": {
+                                        "text": "    fun submit(newRows: List<MenuRow>) {\n        rows = newRows\n        notifyDataSetChanged()\n    }\n\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "2f40e93884ac6465"
+                    }
+                },
+                {
+                    "ruleId": "NotifyDataSetChanged",
+                    "ruleIndex": 7,
+                    "message": {
+                        "text": "It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort.",
+                        "markdown": "It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/TrayAdapter.kt"
+                                },
+                                "region": {
+                                    "startLine": 35,
+                                    "startColumn": 9,
+                                    "endLine": 35,
+                                    "endColumn": 31,
+                                    "charOffset": 1221,
+                                    "charLength": 22,
+                                    "snippet": {
+                                        "text": "notifyDataSetChanged()"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 33,
+                                    "endLine": 38,
+                                    "snippet": {
+                                        "text": "    fun submit(newRows: List<TrayRow>) {\n        rows = newRows\n        notifyDataSetChanged()\n    }\n\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "09490f3e393f24a5"
+                    }
+                },
+                {
+                    "ruleId": "IconLauncherShape",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-hdpi/ic_launcher.png"
+                                },
+                                "region": {
+                                    "byteOffset": 0
+                                }                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                    }
+                },
+                {
+                    "ruleId": "IconLauncherShape",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-mdpi/ic_launcher.png"
+                                },
+                                "region": {
+                                    "byteOffset": 0
+                                }                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                    }
+                },
+                {
+                    "ruleId": "IconLauncherShape",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+                                },
+                                "region": {
+                                    "byteOffset": 0
+                                }                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                    }
+                },
+                {
+                    "ruleId": "IconLauncherShape",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+                                },
+                                "region": {
+                                    "byteOffset": 0
+                                }                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                    }
+                },
+                {
+                    "ruleId": "IconLauncherShape",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+                                },
+                                "region": {
+                                    "byteOffset": 0
+                                }                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                    }
+                },
+                {
+                    "ruleId": "MonochromeLauncherIcon",
+                    "ruleIndex": 6,
+                    "message": {
+                        "text": "The application adaptive icon is missing a monochrome tag"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+                                },
+                                "region": {
+                                    "startLine": 2,
+                                    "startColumn": 1,
+                                    "endLine": 5,
+                                    "endColumn": 17,
+                                    "charOffset": 39,
+                                    "charLength": 219,
+                                    "snippet": {
+                                        "text": "<adaptive-icon xmlns:android=\"http://schemas.android.com/apk/res/android\">\n    <background android:drawable=\"@android:color/black\" />\n    <foreground android:drawable=\"@mipmap/ic_launcher_foreground\" />\n</adaptive-icon>"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "text": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<adaptive-icon xmlns:android=\"http://schemas.android.com/apk/res/android\">\n    <background android:drawable=\"@android:color/black\" />\n    <foreground android:drawable=\"@mipmap/ic_launcher_foreground\" />\n</adaptive-icon>\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "62e4a2b1188e088c"
+                    }
+                },
+                {
+                    "ruleId": "IconMissingDensityFolder",
+                    "ruleIndex": 4,
+                    "message": {
+                        "text": "Missing density variation folders in src\\main\\res: drawable-hdpi, drawable-mdpi, drawable-xxhdpi",
+                        "markdown": "Missing density variation folders in `src\\main\\res`: drawable-hdpi, drawable-mdpi, drawable-xxhdpi"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res"
+                                },
+                                "region": {
+                                    "startLine": 1
+                                }                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                    }
+                },
+                {
+                    "ruleId": "ViewConstructor",
+                    "ruleIndex": 11,
+                    "message": {
+                        "text": "Custom view ChipView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)",
+                        "markdown": "Custom view `ChipView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/ChipView.kt"
+                                },
+                                "region": {
+                                    "startLine": 16,
+                                    "startColumn": 7,
+                                    "endLine": 16,
+                                    "endColumn": 15,
+                                    "charOffset": 493,
+                                    "charLength": 8,
+                                    "snippet": {
+                                        "text": "ChipView"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 14,
+                                    "endLine": 19,
+                                    "snippet": {
+                                        "text": "\n/** Button of the top bar: optional icon, text and count, shaped by the theme. */\nclass ChipView(context: Context, metrics: HomeMetrics, private val theme: ThemeDefinition) : LinearLayout(context) {\n    private val icon = ImageView(context)\n    private val label = TextView(context)\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "999c9b4d1a64e64c"
+                    }
+                },
+                {
+                    "ruleId": "ViewConstructor",
+                    "ruleIndex": 11,
+                    "message": {
+                        "text": "Custom view HeaderView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)",
+                        "markdown": "Custom view `HeaderView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/HeaderView.kt"
+                                },
+                                "region": {
+                                    "startLine": 19,
+                                    "startColumn": 7,
+                                    "endLine": 19,
+                                    "endColumn": 17,
+                                    "charOffset": 615,
+                                    "charLength": 10,
+                                    "snippet": {
+                                        "text": "HeaderView"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 17,
+                                    "endLine": 22,
+                                    "snippet": {
+                                        "text": "\n/** Top of the home screen: clock, date and weather on the left, buttons on the right. */\nclass HeaderView(\n    context: Context,\n    private val metrics: HomeMetrics,\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "146252d8f8020d34"
+                    }
+                },
+                {
+                    "ruleId": "ViewConstructor",
+                    "ruleIndex": 11,
+                    "message": {
+                        "text": "Custom view SwitchView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)",
+                        "markdown": "Custom view `SwitchView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/ui/menu/MenuWidgets.kt"
+                                },
+                                "region": {
+                                    "startLine": 13,
+                                    "startColumn": 7,
+                                    "endLine": 13,
+                                    "endColumn": 17,
+                                    "charOffset": 364,
+                                    "charLength": 10,
+                                    "snippet": {
+                                        "text": "SwitchView"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 11,
+                                    "endLine": 16,
+                                    "snippet": {
+                                        "text": "\n/** On/off switch drawn with the colors of the theme. */\nclass SwitchView(context: Context, private val square: Boolean) : View(context) {\n    var trackOn = Color.WHITE\n    var trackOff = Color.GRAY\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "4910acc523fdb249"
+                    }
+                },
+                {
+                    "ruleId": "ViewConstructor",
+                    "ruleIndex": 11,
+                    "message": {
+                        "text": "Custom view RadioView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)",
+                        "markdown": "Custom view `RadioView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/ui/menu/MenuWidgets.kt"
+                                },
+                                "region": {
+                                    "startLine": 67,
+                                    "startColumn": 7,
+                                    "endLine": 67,
+                                    "endColumn": 16,
+                                    "charOffset": 2215,
+                                    "charLength": 9,
+                                    "snippet": {
+                                        "text": "RadioView"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 65,
+                                    "endLine": 70,
+                                    "snippet": {
+                                        "text": "\n/** Selection mark for choosing one option among several. */\nclass RadioView(context: Context, private val square: Boolean) : View(context) {\n    var color = Color.WHITE\n    var selected2 = false\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "4b2954c4290e67b8"
+                    }
+                },
+                {
+                    "ruleId": "ViewConstructor",
+                    "ruleIndex": 11,
+                    "message": {
+                        "text": "Custom view SwatchView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)",
+                        "markdown": "Custom view `SwatchView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/ui/menu/MenuWidgets.kt"
+                                },
+                                "region": {
+                                    "startLine": 96,
+                                    "startColumn": 7,
+                                    "endLine": 96,
+                                    "endColumn": 17,
+                                    "charOffset": 3214,
+                                    "charLength": 10,
+                                    "snippet": {
+                                        "text": "SwatchView"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 94,
+                                    "endLine": 99,
+                                    "snippet": {
+                                        "text": "\n/** Row of color dots that previews a theme. */\nclass SwatchView(context: Context, private val square: Boolean) : View(context) {\n    var colors: List<Int> = emptyList()\n    private val paint = Paint(Paint.ANTI_ALIAS_FLAG)\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "cf34bc62cca022d6"
+                    }
+                },
+                {
+                    "ruleId": "ViewConstructor",
+                    "ruleIndex": 11,
+                    "message": {
+                        "text": "Custom view SaverView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)",
+                        "markdown": "Custom view `SaverView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/screensaver/SaverView.kt"
+                                },
+                                "region": {
+                                    "startLine": 35,
+                                    "startColumn": 7,
+                                    "endLine": 35,
+                                    "endColumn": 16,
+                                    "charOffset": 1203,
+                                    "charLength": 9,
+                                    "snippet": {
+                                        "text": "SaverView"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 33,
+                                    "endLine": 38,
+                                    "snippet": {
+                                        "text": " * smaller and moves often, so the movement can be seen.\n */\nclass SaverView(context: Context, preview: Boolean = false) : FrameLayout(context) {\n    private val unit = resources.displayMetrics.widthPixels / 100f * if (preview) SaverViews.PREVIEW_SCALE else 1f\n    private val moveInterval = if (preview) PREVIEW_MOVE_INTERVAL_MS else MOVE_INTERVAL_MS\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "0843a3b9d43edd2e"
+                    }
+                },
+                {
+                    "ruleId": "ViewConstructor",
+                    "ruleIndex": 11,
+                    "message": {
+                        "text": "Custom view WallpaperLayer is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int)",
+                        "markdown": "Custom view `WallpaperLayer` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                                },
+                                "region": {
+                                    "startLine": 35,
+                                    "startColumn": 7,
+                                    "endLine": 35,
+                                    "endColumn": 21,
+                                    "charOffset": 1160,
+                                    "charLength": 14,
+                                    "snippet": {
+                                        "text": "WallpaperLayer"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 33,
+                                    "endLine": 38,
+                                    "snippet": {
+                                        "text": " * calls [onBroken] and leaves the theme background showing.\n */\nclass WallpaperLayer(\n    context: Context,\n    private val scope: CoroutineScope,\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "9fd18f88be858064"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension function String.toUri instead?",
+                        "markdown": "Use the KTX extension function `String.toUri` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/apps/AppMenus.kt"
+                                },
+                                "region": {
+                                    "startLine": 68,
+                                    "startColumn": 74,
+                                    "endLine": 68,
+                                    "endColumn": 113,
+                                    "charOffset": 3046,
+                                    "charLength": 39,
+                                    "snippet": {
+                                        "text": "Uri.parse(\"package:${app.packageName}\")"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 66,
+                                    "endLine": 71,
+                                    "snippet": {
+                                        "text": "            MenuRow.Action(text(R.string.menu_info), R.drawable.ic_info) {\n                menu.openOrWarn(\n                    Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse(\"package:${app.packageName}\")),\n                )\n            },\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the toUri extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/apps/AppMenus.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 68,
+                                                "startColumn": 74,
+                                                "charOffset": 3046,
+                                                "endLine": 68,
+                                                "endColumn": 113,
+                                                "charLength": 39
+                                            },
+                                            "insertedContent": {
+                                                "text": "\"package:${app.packageName}\".toUri()"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "498ff4f59c368f19"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension function String.toUri instead?",
+                        "markdown": "Use the KTX extension function `String.toUri` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/apps/AppMenus.kt"
+                                },
+                                "region": {
+                                    "startLine": 72,
+                                    "startColumn": 62,
+                                    "endLine": 72,
+                                    "endColumn": 101,
+                                    "charOffset": 3278,
+                                    "charLength": 39,
+                                    "snippet": {
+                                        "text": "Uri.parse(\"package:${app.packageName}\")"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 70,
+                                    "endLine": 75,
+                                    "snippet": {
+                                        "text": "            },\n            MenuRow.Action(text(R.string.menu_uninstall), R.drawable.ic_trash, danger = true) {\n                menu.openOrWarn(Intent(Intent.ACTION_DELETE, Uri.parse(\"package:${app.packageName}\")))\n            },\n            // Keeps the settings reachable even when their button is hidden from the top bar.\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the toUri extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/apps/AppMenus.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 72,
+                                                "startColumn": 62,
+                                                "charOffset": 3278,
+                                                "endLine": 72,
+                                                "endColumn": 101,
+                                                "charLength": 39
+                                            },
+                                            "insertedContent": {
+                                                "text": "\"package:${app.packageName}\".toUri()"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "28838e454cb310fe"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX function createBitmap instead?",
+                        "markdown": "Use the KTX function `createBitmap` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/CardArtLoader.kt"
+                                },
+                                "region": {
+                                    "startLine": 57,
+                                    "startColumn": 22,
+                                    "endLine": 57,
+                                    "endColumn": 81,
+                                    "charOffset": 2077,
+                                    "charLength": 59,
+                                    "snippet": {
+                                        "text": "Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 55,
+                                    "endLine": 60,
+                                    "snippet": {
+                                        "text": "        val width = 24\n        val height = 14\n        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)\n        val previous = drawable.copyBounds()\n        drawable.setBounds(0, 0, width, height)\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the createBitmap function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/home/CardArtLoader.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 57,
+                                                "startColumn": 22,
+                                                "charOffset": 2077,
+                                                "endLine": 57,
+                                                "endColumn": 81,
+                                                "charLength": 59
+                                            },
+                                            "insertedContent": {
+                                                "text": "createBitmap(width, height)"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "f78f7f156d6d7141"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension property View.isVisible instead?",
+                        "markdown": "Use the KTX extension property `View.isVisible` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/ChipView.kt"
+                                },
+                                "region": {
+                                    "startLine": 74,
+                                    "startColumn": 26,
+                                    "endLine": 74,
+                                    "endColumn": 58,
+                                    "charOffset": 2776,
+                                    "charLength": 32,
+                                    "snippet": {
+                                        "text": "label.visibility == View.VISIBLE"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 72,
+                                    "endLine": 77,
+                                    "snippet": {
+                                        "text": "    /** The gap after the icon only exists when something follows it. */\n    private fun syncIconMargin() {\n        val hasContent = label.visibility == View.VISIBLE || badge.visibility == View.VISIBLE\n        (icon.layoutParams as LayoutParams).marginEnd = if (hasContent) iconGap else 0\n        icon.requestLayout()\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the isVisible extension property"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/home/ChipView.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 74,
+                                                "startColumn": 26,
+                                                "charOffset": 2776,
+                                                "endLine": 74,
+                                                "endColumn": 58,
+                                                "charLength": 32
+                                            },
+                                            "insertedContent": {
+                                                "text": "label.isVisible"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "7968ed5c2b78a5ef"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension property View.isVisible instead?",
+                        "markdown": "Use the KTX extension property `View.isVisible` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/ChipView.kt"
+                                },
+                                "region": {
+                                    "startLine": 74,
+                                    "startColumn": 62,
+                                    "endLine": 74,
+                                    "endColumn": 94,
+                                    "charOffset": 2812,
+                                    "charLength": 32,
+                                    "snippet": {
+                                        "text": "badge.visibility == View.VISIBLE"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 72,
+                                    "endLine": 77,
+                                    "snippet": {
+                                        "text": "    /** The gap after the icon only exists when something follows it. */\n    private fun syncIconMargin() {\n        val hasContent = label.visibility == View.VISIBLE || badge.visibility == View.VISIBLE\n        (icon.layoutParams as LayoutParams).marginEnd = if (hasContent) iconGap else 0\n        icon.requestLayout()\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the isVisible extension property"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/home/ChipView.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 74,
+                                                "startColumn": 62,
+                                                "charOffset": 2812,
+                                                "endLine": 74,
+                                                "endColumn": 94,
+                                                "charLength": 32
+                                            },
+                                            "insertedContent": {
+                                                "text": "badge.isVisible"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "7968ed5c2b78a5ef"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension property View.isVisible instead?",
+                        "markdown": "Use the KTX extension property `View.isVisible` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/HeaderView.kt"
+                                },
+                                "region": {
+                                    "startLine": 103,
+                                    "startColumn": 74,
+                                    "endLine": 103,
+                                    "endColumn": 103,
+                                    "charOffset": 4102,
+                                    "charLength": 29,
+                                    "snippet": {
+                                        "text": "it.visibility == View.VISIBLE"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 101,
+                                    "endLine": 106,
+                                    "snippet": {
+                                        "text": "\n    fun visibleChips(): List<View> =\n        (0 until chips.childCount).map { chips.getChildAt(it) }.filter { it.visibility == View.VISIBLE }\n\n    private fun text(size: Float) = TextView(context).apply {\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the isVisible extension property"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/home/HeaderView.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 103,
+                                                "startColumn": 74,
+                                                "charOffset": 4102,
+                                                "endLine": 103,
+                                                "endColumn": 103,
+                                                "charLength": 29
+                                            },
+                                            "insertedContent": {
+                                                "text": "it.isVisible"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "d24d23e3fe683e88"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension function Int.toDrawable instead?",
+                        "markdown": "Use the KTX extension function `Int.toDrawable` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/ui/menu/MenuAdapter.kt"
+                                },
+                                "region": {
+                                    "startLine": 331,
+                                    "startColumn": 41,
+                                    "endLine": 331,
+                                    "endColumn": 68,
+                                    "charOffset": 14683,
+                                    "charLength": 27,
+                                    "snippet": {
+                                        "text": "ColorDrawable(style.accent)"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 329,
+                                    "endLine": 334,
+                                    "snippet": {
+                                        "text": "        private val title = text(parent, 1.15f, style.muted).apply { maxLines = 1 }\n        private val value = text(parent, 2.1f, style.text, FontWeight.LIGHT).apply { maxLines = 1 }\n        private val fill = ClipDrawable(ColorDrawable(style.accent), Gravity.START, ClipDrawable.HORIZONTAL)\n        private val track = FrameLayout(parent.context).apply {\n            setBackgroundColor(style.raised)\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the toDrawable extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/ui/menu/MenuAdapter.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 331,
+                                                "startColumn": 41,
+                                                "charOffset": 14683,
+                                                "endLine": 331,
+                                                "endColumn": 68,
+                                                "charLength": 27
+                                            },
+                                            "insertedContent": {
+                                                "text": "style.accent.toDrawable()"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "b398a6f4de6fffad"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension function SharedPreferences.edit instead?",
+                        "markdown": "Use the KTX extension function `SharedPreferences.edit` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+                                },
+                                "region": {
+                                    "startLine": 29,
+                                    "startColumn": 13,
+                                    "endLine": 29,
+                                    "endColumn": 25,
+                                    "charOffset": 1103,
+                                    "charLength": 12,
+                                    "snippet": {
+                                        "text": "prefs.edit()"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 27,
+                                    "endLine": 32,
+                                    "snippet": {
+                                        "text": "        val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)\n        return DismissedNotifications(prefs.getStringSet(KEY_DISMISSED, emptySet()).orEmpty()) {\n            prefs.edit().putStringSet(KEY_DISMISSED, it).apply()\n        }\n    }\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the edit extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 29,
+                                                "startColumn": 19,
+                                                "charOffset": 1109,
+                                                "endLine": 29,
+                                                "endColumn": 24,
+                                                "charLength": 5
+                                            },
+                                            "insertedContent": {
+                                                "text": "edit"
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 29,
+                                                "startColumn": 24,
+                                                "charOffset": 1114,
+                                                "endLine": 29,
+                                                "endColumn": 25,
+                                                "charLength": 1
+                                            },
+                                            "insertedContent": {
+                                                "text": " {"
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 29,
+                                                "startColumn": 25,
+                                                "charOffset": 1115,
+                                                "endLine": 29,
+                                                "endColumn": 26,
+                                                "charLength": 1
+                                            },
+                                            "insertedContent": {
+                                                "text": ""
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 29,
+                                                "startColumn": 57,
+                                                "charOffset": 1147,
+                                                "endLine": 29,
+                                                "endColumn": 65,
+                                                "charLength": 8
+                                            },
+                                            "insertedContent": {
+                                                "text": "}"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "2d42fdf70b05ddd6"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX function createBitmap instead?",
+                        "markdown": "Use the KTX function `createBitmap` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/screensaver/SaverViews.kt"
+                                },
+                                "region": {
+                                    "startLine": 111,
+                                    "startColumn": 22,
+                                    "endLine": 111,
+                                    "endColumn": 81,
+                                    "charOffset": 3750,
+                                    "charLength": 59,
+                                    "snippet": {
+                                        "text": "Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 109,
+                                    "endLine": 114,
+                                    "snippet": {
+                                        "text": "object DvdLogo {\n    fun draw(width: Int, height: Int): Bitmap {\n        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)\n        val canvas = Canvas(bitmap)\n        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the createBitmap function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/screensaver/SaverViews.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 111,
+                                                "startColumn": 22,
+                                                "charOffset": 3750,
+                                                "endLine": 111,
+                                                "endColumn": 81,
+                                                "charLength": 59
+                                            },
+                                            "insertedContent": {
+                                                "text": "createBitmap(width, height)"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "c8ecf74d1536d0cf"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension function String.toUri instead?",
+                        "markdown": "Use the KTX extension function `String.toUri` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/update/UpdateInstaller.kt"
+                                },
+                                "region": {
+                                    "startLine": 44,
+                                    "startColumn": 64,
+                                    "endLine": 44,
+                                    "endColumn": 108,
+                                    "charOffset": 1690,
+                                    "charLength": 44,
+                                    "snippet": {
+                                        "text": "Uri.parse(\"package:${activity.packageName}\")"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 42,
+                                    "endLine": 47,
+                                    "snippet": {
+                                        "text": "    override fun openPermissionScreen(): Boolean = opened {\n        activity.startActivity(\n            Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse(\"package:${activity.packageName}\")),\n        )\n    }\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the toUri extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/update/UpdateInstaller.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 44,
+                                                "startColumn": 64,
+                                                "charOffset": 1690,
+                                                "endLine": 44,
+                                                "endColumn": 108,
+                                                "charLength": 44
+                                            },
+                                            "insertedContent": {
+                                                "text": "\"package:${activity.packageName}\".toUri()"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "ef14b13ca4457994"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension function Canvas.withScale instead?",
+                        "markdown": "Use the KTX extension function `Canvas.withScale` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                                },
+                                "region": {
+                                    "startLine": 266,
+                                    "startColumn": 13,
+                                    "endLine": 266,
+                                    "endColumn": 26,
+                                    "charOffset": 9747,
+                                    "charLength": 13,
+                                    "snippet": {
+                                        "text": "canvas.save()"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 264,
+                                    "endLine": 269,
+                                    "snippet": {
+                                        "text": "            movie.setTime(((SystemClock.uptimeMillis() - start) % duration).toInt())\n            val scale = maxOf(width.toFloat() / movie.width(), height.toFloat() / movie.height())\n            canvas.save()\n            canvas.scale(scale, scale)\n            canvas.translate((width / scale - movie.width()) / 2, (height / scale - movie.height()) / 2)\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the withScale extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 266,
+                                                "startColumn": 20,
+                                                "charOffset": 9754,
+                                                "endLine": 266,
+                                                "endColumn": 25,
+                                                "charLength": 5
+                                            },
+                                            "insertedContent": {
+                                                "text": "withScale(scale, scale"
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 266,
+                                                "startColumn": 25,
+                                                "charOffset": 9759,
+                                                "endLine": 266,
+                                                "endColumn": 26,
+                                                "charLength": 1
+                                            },
+                                            "insertedContent": {
+                                                "text": ") {"
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 267,
+                                                "startColumn": 1,
+                                                "charOffset": 9761,
+                                                "endLine": 268,
+                                                "endColumn": 40,
+                                                "charLength": 39
+                                            },
+                                            "insertedContent": {
+                                                "text": ""
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 268,
+                                                "startColumn": 13,
+                                                "charOffset": 9812,
+                                                "endLine": 268,
+                                                "endColumn": 20,
+                                                "charLength": 7
+                                            },
+                                            "insertedContent": {
+                                                "text": ""
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 269,
+                                                "startColumn": 24,
+                                                "charOffset": 9928,
+                                                "endLine": 269,
+                                                "endColumn": 30,
+                                                "charLength": 6
+                                            },
+                                            "insertedContent": {
+                                                "text": "this"
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 270,
+                                                "startColumn": 13,
+                                                "charOffset": 9956,
+                                                "endLine": 270,
+                                                "endColumn": 29,
+                                                "charLength": 16
+                                            },
+                                            "insertedContent": {
+                                                "text": "}"
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 268,
+                                                "startColumn": 1,
+                                                "charOffset": 9800
+                                            },
+                                            "insertedContent": {
+                                                "text": "    "
+                                            }
+                                        },
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 269,
+                                                "startColumn": 1,
+                                                "charOffset": 9905
+                                            },
+                                            "insertedContent": {
+                                                "text": "    "
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "e6a952548783763c"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 10,
+                    "message": {
+                        "text": "Use the KTX extension function Bitmap.scale instead?",
+                        "markdown": "Use the KTX extension function `Bitmap.scale` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/wallpaper/WallpaperThumbs.kt"
+                                },
+                                "region": {
+                                    "startLine": 70,
+                                    "startColumn": 13,
+                                    "endLine": 70,
+                                    "endColumn": 89,
+                                    "charOffset": 2783,
+                                    "charLength": 76,
+                                    "snippet": {
+                                        "text": "Bitmap.createScaledBitmap(frame, THUMB_WIDTH, height.coerceAtLeast(1), true)"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 68,
+                                    "endLine": 73,
+                                    "snippet": {
+                                        "text": "            val frame = retriever.frameAtTime ?: return null\n            val height = THUMB_WIDTH * frame.height / frame.width.coerceAtLeast(1)\n            Bitmap.createScaledBitmap(frame, THUMB_WIDTH, height.coerceAtLeast(1), true).also {\n                if (it !== frame) frame.recycle()\n            }\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the scale extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/com/loop/launcher/wallpaper/WallpaperThumbs.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 70,
+                                                "startColumn": 13,
+                                                "charOffset": 2783,
+                                                "endLine": 70,
+                                                "endColumn": 89,
+                                                "charLength": 76
+                                            },
+                                            "insertedContent": {
+                                                "text": "frame.scale(THUMB_WIDTH, height.coerceAtLeast(1))"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "160b97c2914b2380"
+                    }
+                },
+                {
+                    "ruleId": "SetTextI18n",
+                    "ruleIndex": 9,
+                    "message": {
+                        "text": "Number formatting does not take into account locale settings. Consider using String.format instead.",
+                        "markdown": "Number formatting does not take into account locale settings. Consider using `String.format` instead."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/com/loop/launcher/home/ChipView.kt"
+                                },
+                                "region": {
+                                    "startLine": 67,
+                                    "startColumn": 22,
+                                    "endLine": 67,
+                                    "endColumn": 38,
+                                    "charOffset": 2524,
+                                    "charLength": 16,
+                                    "snippet": {
+                                        "text": "count.toString()"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 65,
+                                    "endLine": 70,
+                                    "snippet": {
+                                        "text": "\n    fun setBadge(count: Int) {\n        badge.text = count.toString()\n        badge.visibility = if (count > 0) View.VISIBLE else View.GONE\n        syncIconMargin()\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "905466f1f049ce0b"
+                    }
+                }
+            ]
+        }
+    ]
+}

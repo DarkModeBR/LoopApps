@@ -1,0 +1,451 @@
+-- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:66:9-74:20
+	android:grantUriPermissions
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:70:13-47
+	android:authorities
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:68:13-59
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:69:13-37
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:67:13-62
+provider#rikka.shizuku.ShizukuProvider
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:76:9-82:82
+	android:enabled
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:79:13-35
+	android:authorities
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:78:13-59
+	android:multiprocess
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:81:13-41
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:80:13-36
+	android:permission
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:82:13-79
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:77:13-57
+manifest
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:2:1-130:12
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:2:1-130:12
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:2:1-130:12
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:2:1-130:12
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1b7e880db4ca7ba51cc20d6c3a0b6e2b\transformed\recyclerview-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\21d7806de05997aef18d6fa7f662927b\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e9987379daf9de26417caf958538549b\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\6466ebe8b28186a04acfb95d280ce40c\transformed\core-ktx-1.19.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1305d9e3853e19d7863f2322cea134ca\transformed\lifecycle-runtime\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e3e5dcc5e032b94e026cb398674c3f9a\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5fd717375981965955bb88d423421039\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1fe6cb037a1b7936eebb9bd29ca2620e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:2:1-16:12
+MERGED from [dev.rikka.shizuku:api:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\da94a4b0370ab469daed4692620e8c47\transformed\api-13.1.5\AndroidManifest.xml:2:1-7:12
+MERGED from [dev.rikka.shizuku:shared:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e2b25ca8f1fccc8dbdb4a8a364b532f1\transformed\shared-13.1.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\fc3a69f48cdf63f2f0eeb393ffb66acf\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5cf73d46e9a3e332388b684c4f01c927\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\f324fab18c3a46cd1b504b021da45370\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\405f0c0066685bd78bb7ffe30fb3f404\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [dev.rikka.shizuku:aidl:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\88fa2cd82cae15d1151ae9462e7f4144\transformed\aidl-13.1.5\AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:4:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:6:5-83
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:6:22-80
+uses-permission#android.permission.REQUEST_DELETE_PACKAGES
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:7:5-82
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:7:22-79
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:8:5-107
+	android:maxSdkVersion
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:8:78-104
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:8:22-77
+uses-permission#android.permission.READ_MEDIA_IMAGES
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:9:22-73
+uses-permission#android.permission.READ_MEDIA_VIDEO
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:10:22-72
+uses-feature#android.software.leanback
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:12:5-87
+	android:required
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:12:60-84
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:12:19-59
+uses-feature#android.hardware.touchscreen
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:13:5-90
+	android:required
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:13:63-87
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:13:19-62
+queries
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:15:5-30:15
+intent#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:16:9-19:18
+action#android.intent.action.MAIN
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:13-65
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:17:21-62
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:18:13-73
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:18:23-70
+intent#action:name:android.intent.action.MAIN+category:name:android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:20:9-23:18
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:22:13-82
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:22:23-79
+intent#action:name:android.intent.action.MAIN+category:name:android.intent.category.HOME
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:24:9-27:18
+category#android.intent.category.HOME
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:26:13-69
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:26:23-66
+package#moe.shizuku.privileged.api
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:28:9-62
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:28:18-59
+package#com.google.android.apps.tv.launcherx
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:29:9-72
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:29:18-69
+application
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:32:5-129:19
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:32:5-129:19
+MERGED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1fe6cb037a1b7936eebb9bd29ca2620e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1fe6cb037a1b7936eebb9bd29ca2620e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:10:5-14:19
+MERGED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:10:5-14:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5cf73d46e9a3e332388b684c4f01c927\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5cf73d46e9a3e332388b684c4f01c927\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+	android:requestLegacyExternalStorage
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:34:9-52
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:38:9-36
+	android:label
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:37:9-41
+	tools:ignore
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:10:18-69
+	android:icon
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:36:9-43
+	android:allowBackup
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:33:9-36
+	android:banner
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:35:9-42
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:39:9-42
+activity#com.loop.launcher.home.HomeActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:41:9-64:20
+	android:screenOrientation
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:49:13-50
+	android:clearTaskOnLaunch
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:44:13-45
+	android:stateNotNeeded
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:50:13-42
+	android:launchMode
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:47:13-44
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:46:13-36
+	android:resumeWhilePausing
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:48:13-46
+	android:configChanges
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:45:13-114
+	android:banner
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:43:13-46
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:42:13-46
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:51:13-54:29
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:55:13-58:29
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:59:13-63:29
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:62:17-76
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:62:27-73
+service#com.loop.launcher.notifications.LoopNotificationListener
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:84:9-92:19
+	android:label
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:87:13-45
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:86:13-36
+	android:permission
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:88:13-87
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:85:13-67
+intent-filter#action:name:android.service.notification.NotificationListenerService
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:89:13-91:29
+action#android.service.notification.NotificationListenerService
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:90:17-99
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:90:25-96
+service#com.loop.launcher.screensaver.LoopDreamService
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:94:9-106:19
+	android:label
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:97:13-48
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:96:13-36
+	android:permission
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:98:13-71
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:95:13-57
+intent-filter#action:name:android.service.dreams.DreamService+category:name:android.intent.category.DEFAULT
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:99:13-102:29
+action#android.service.dreams.DreamService
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:100:17-78
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:100:25-75
+meta-data#android.service.dream
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:103:13-105:49
+	android:resource
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:105:17-46
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:104:17-53
+service#com.loop.launcher.privileged.HomeCaptureService
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:108:9-119:19
+	android:label
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:111:13-58
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:110:13-36
+	android:permission
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:112:13-79
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:109:13-58
+intent-filter#action:name:android.accessibilityservice.AccessibilityService
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:113:13-115:29
+action#android.accessibilityservice.AccessibilityService
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:114:17-92
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:114:25-89
+meta-data#android.accessibilityservice
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:116:13-118:56
+	android:resource
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:118:17-53
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:117:17-60
+activity#com.loop.launcher.screensaver.SaverActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:121:9-88
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:121:61-85
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:121:19-60
+activity#com.loop.launcher.privileged.PowerMenuActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:9-130
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:64-88
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:89-127
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:122:19-63
+activity#com.loop.launcher.privileged.AccessHelpActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:9-131
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:65-89
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:90-128
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:123:19-64
+activity#com.loop.launcher.settings.SettingsMenuActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:9-131
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:65-89
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:90-128
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:124:19-64
+activity#com.loop.launcher.apps.AppMenuActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:9-122
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:56-80
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:81-119
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:125:19-55
+activity#com.loop.launcher.status.StatusMenuActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:9-127
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:61-85
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:86-124
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:126:19-60
+activity#com.loop.launcher.notifications.NotificationsMenuActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:9-141
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:75-99
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:100-138
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:127:19-74
+activity#com.loop.launcher.update.UpdateMenuActivity
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:9-127
+	android:exported
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:61-85
+	android:theme
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:86-124
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:128:19-60
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:71:13-73:54
+	android:resource
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:73:17-51
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml:72:17-67
+uses-sdk
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1b7e880db4ca7ba51cc20d6c3a0b6e2b\transformed\recyclerview-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1b7e880db4ca7ba51cc20d6c3a0b6e2b\transformed\recyclerview-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\21d7806de05997aef18d6fa7f662927b\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\21d7806de05997aef18d6fa7f662927b\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e9987379daf9de26417caf958538549b\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e9987379daf9de26417caf958538549b\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\6466ebe8b28186a04acfb95d280ce40c\transformed\core-ktx-1.19.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\6466ebe8b28186a04acfb95d280ce40c\transformed\core-ktx-1.19.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1305d9e3853e19d7863f2322cea134ca\transformed\lifecycle-runtime\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1305d9e3853e19d7863f2322cea134ca\transformed\lifecycle-runtime\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e3e5dcc5e032b94e026cb398674c3f9a\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e3e5dcc5e032b94e026cb398674c3f9a\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5fd717375981965955bb88d423421039\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5fd717375981965955bb88d423421039\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1fe6cb037a1b7936eebb9bd29ca2620e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\1fe6cb037a1b7936eebb9bd29ca2620e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:6:5-44
+MERGED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:6:5-44
+MERGED from [dev.rikka.shizuku:api:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\da94a4b0370ab469daed4692620e8c47\transformed\api-13.1.5\AndroidManifest.xml:5:5-44
+MERGED from [dev.rikka.shizuku:api:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\da94a4b0370ab469daed4692620e8c47\transformed\api-13.1.5\AndroidManifest.xml:5:5-44
+MERGED from [dev.rikka.shizuku:shared:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e2b25ca8f1fccc8dbdb4a8a364b532f1\transformed\shared-13.1.5\AndroidManifest.xml:5:5-44
+MERGED from [dev.rikka.shizuku:shared:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\e2b25ca8f1fccc8dbdb4a8a364b532f1\transformed\shared-13.1.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\fc3a69f48cdf63f2f0eeb393ffb66acf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\fc3a69f48cdf63f2f0eeb393ffb66acf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5cf73d46e9a3e332388b684c4f01c927\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5cf73d46e9a3e332388b684c4f01c927\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\f324fab18c3a46cd1b504b021da45370\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\f324fab18c3a46cd1b504b021da45370\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\405f0c0066685bd78bb7ffe30fb3f404\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\405f0c0066685bd78bb7ffe30fb3f404\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [dev.rikka.shizuku:aidl:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\88fa2cd82cae15d1151ae9462e7f4144\transformed\aidl-13.1.5\AndroidManifest.xml:5:5-44
+MERGED from [dev.rikka.shizuku:aidl:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\88fa2cd82cae15d1151ae9462e7f4144\transformed\aidl-13.1.5\AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\AndroidManifest.xml
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:23:9-81
+permission#com.loop.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:26:22-94
+uses-permission#com.loop.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.19.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\dc432036ef17c398f43bf644043c7ce2\transformed\core-1.19.1\AndroidManifest.xml:26:22-94
+uses-permission#moe.shizuku.manager.permission.API_V23
+ADDED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:8:5-78
+	android:name
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:8:22-75
+meta-data#moe.shizuku.client.V3_SUPPORT
+ADDED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:11:9-13:36
+	android:value
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:13:13-33
+	android:name
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\b79420ae9a9c6d1b6b15a6cd91677f32\transformed\provider-13.1.5\AndroidManifest.xml:12:13-57
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5cf73d46e9a3e332388b684c4f01c927\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\5cf73d46e9a3e332388b684c4f01c927\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Administrator\.gradle\caches\9.8.2\transforms\711d46a87e409e592b4b61843c03e002\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92

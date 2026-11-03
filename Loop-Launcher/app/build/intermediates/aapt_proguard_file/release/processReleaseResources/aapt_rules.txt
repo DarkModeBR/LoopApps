@@ -1,0 +1,17 @@
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class androidx.core.content.FileProvider { <init>(); }
+-keep class androidx.profileinstaller.ProfileInstallReceiver { <init>(); }
+-keep class androidx.startup.InitializationProvider { <init>(); }
+-keep class com.loop.launcher.apps.AppMenuActivity { <init>(); }
+-keep class com.loop.launcher.home.HomeActivity { <init>(); }
+-keep class com.loop.launcher.notifications.LoopNotificationListener { <init>(); }
+-keep class com.loop.launcher.notifications.NotificationsMenuActivity { <init>(); }
+-keep class com.loop.launcher.privileged.AccessHelpActivity { <init>(); }
+-keep class com.loop.launcher.privileged.HomeCaptureService { <init>(); }
+-keep class com.loop.launcher.privileged.PowerMenuActivity { <init>(); }
+-keep class com.loop.launcher.screensaver.LoopDreamService { <init>(); }
+-keep class com.loop.launcher.screensaver.SaverActivity { <init>(); }
+-keep class com.loop.launcher.settings.SettingsMenuActivity { <init>(); }
+-keep class com.loop.launcher.status.StatusMenuActivity { <init>(); }
+-keep class com.loop.launcher.update.UpdateMenuActivity { <init>(); }
+-keep class rikka.shizuku.ShizukuProvider { <init>(); }

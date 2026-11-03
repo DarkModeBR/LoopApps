@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.5.0" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="8"
+            column="36"
+            startOffset="456"
+            endLine="8"
+            endColumn="76"
+            endOffset="496"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="32"/>
+            <entry
+                name="read"
+                boolean="true"/>
+        </map>
+    </incident>
+
+    <incident
+        id="InlinedApi"
+        severity="warning"
+        message="">
+        <fix-data minSdk="24-∞" requiresApi="26-∞"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/update/UpdateInstaller.kt"
+            line="44"
+            column="20"
+            startOffset="1646"
+            endLine="44"
+            endColumn="62"
+            endOffset="1688"/>
+        <map>
+            <entry
+                name="message"
+                string="Field requires API level 26 (current min is %1$s): `android.provider.Settings#ACTION_MANAGE_UNKNOWN_APP_SOURCES`"/>
+            <api-levels id="minSdk"
+                value="24-∞"/>
+            <entry
+                name="name"
+                string="ACTION_MANAGE_UNKNOWN_APP_SOURCES"/>
+            <entry
+                name="owner"
+                string="android.provider.Settings"/>
+            <api-levels id="requiresApi"
+                value="26-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="QueryPermissionsNeeded"
+        severity="warning"
+        message="Consider adding a `&lt;queries>` declaration to your manifest when calling this method; see https://g.co/dev/packagevisibility for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/apps/AppSource.kt"
+            line="68"
+            column="12"
+            startOffset="2862"
+            endLine="68"
+            endColumn="33"
+            endOffset="2883"/>
+        <map>
+            <entry
+                name="queryAll"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="QueryPermissionsNeeded"
+        severity="warning"
+        message="Consider adding a `&lt;queries>` declaration to your manifest when calling this method; see https://g.co/dev/packagevisibility for details">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/privileged/HomeSystem.kt"
+            line="30"
+            column="45"
+            startOffset="1380"
+            endLine="30"
+            endColumn="66"
+            endOffset="1401"/>
+        <map>
+            <entry
+                name="queryAll"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 28">
+        <fix-replace
+            description="Delete @RequiresApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+                startOffset="4574"
+                endOffset="4609"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/wallpaper/WallpaperLayer.kt"
+            line="123"
+            column="5"
+            startOffset="4574"
+            endLine="123"
+            endColumn="40"
+            endOffset="4609"/>
+        <map>
+            <condition minGE="28-∞"/>
+        </map>
+    </incident>
+
+</incidents>

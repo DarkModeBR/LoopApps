@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.5.0" type="partial_results">
+    <map id="AppBundleLocaleChanges">
+        <location id="localeChangeLocation"
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/ui/BaseActivity.kt"
+            line="28"
+            column="13"
+            startOffset="1089"
+            endLine="28"
+            endColumn="75"
+            endOffset="1151"/>
+    </map>
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.intent.action.INSTALL_PACKAGE (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/update/UpdateInstaller.kt"
+                            line="54"
+                            column="17"
+                            startOffset="2121"
+                            endLine="54"
+                            endColumn="54"
+                            endOffset="2158"/>
+                    </map>
+                    <map id="android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/privileged/NotificationAccessFlow.kt"
+                            line="23"
+                            column="46"
+                            startOffset="797"
+                            endLine="23"
+                            endColumn="100"
+                            endOffset="851"/>
+                    </map>
+                    <map id="android.settings.APPLICATION_DETAILS_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/notifications/NotificationsMenuActivity.kt"
+                            line="47"
+                            column="16"
+                            startOffset="1910"
+                            endLine="47"
+                            endColumn="105"
+                            endOffset="1999"/>
+                    </map>
+                    <map id="android.settings.MANAGE_UNKNOWN_APP_SOURCES (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/loop/launcher/update/UpdateInstaller.kt"
+                            line="44"
+                            column="13"
+                            startOffset="1639"
+                            endLine="44"
+                            endColumn="109"
+                            endOffset="1735"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.loop.launcher.home.HomeActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="drawable[banner(U),ic_apps(U),ic_arrow_down(U),ic_arrow_up(U),ic_bell(U),ic_cable(U),ic_check(U),ic_chevron_right(U),ic_close(U),ic_cloud(U),ic_edit(U),ic_eye(U),ic_eye_off(U),ic_font(U),ic_globe(U),ic_grid(U),ic_home(U),ic_image(U),ic_info(U),ic_moon(U),ic_move(U),ic_no_network(U),ic_open(U),ic_palette(U),ic_pin(U),ic_plus(U),ic_power(U),ic_restart(U),ic_settings(U),ic_status(U),ic_thermometer(U),ic_trash(U),ic_update(U),ic_usb(U),ic_wifi(U)],mipmap[ic_launcher(U),ic_launcher_foreground(U)],string[app_name(U),saver_title(U),capture_service_label(U),tray_favorites(U),tray_movies(U),tray_music(U),tray_games(U),tray_other(U),theme_app_color(U),home_no_apps(U),home_open_settings(U),chip_settings(U),app_could_not_open(U),settings_title(U),settings_layout(U),layout_highlight(U),layout_compact(U),settings_theme(U),settings_language(U),language_system(U),language_pt(U),language_en(U),settings_organize_trays(U),settings_all_apps(U),settings_system(U),menu_open(U),menu_move(U),menu_hide(U),menu_show(U),menu_info(U),menu_uninstall(U),app_hidden_mark(U),tray_create(U),tray_rename(U),tray_up(U),tray_down(U),tray_delete(U),tray_name_hint(U),tray_app_count(U),tray_delete_note(U),dialog_cancel(U),value_on(U),value_off(U),connection_wifi(U),connection_cable(U),connection_other(U),connection_none(U),usb_device(U),weather_clear(U),weather_partly_cloudy(U),weather_cloudy(U),weather_fog(U),weather_drizzle(U),weather_rain(U),weather_snow(U),weather_thunder(U),settings_weather(U),settings_temp_unit(U),settings_city(U),city_auto(U),city_hint(U),city_not_found(U),status_title(U),status_cpu(U),status_memory(U),status_storage(U),status_uptime(U),chip_status(U),notifications_title(U),notifications_empty(U),settings_set_default(U),home_lost_default(U),access_default_title(U),access_default_intro(U),access_done(U),access_failed(U),access_shizuku_title(U),shizuku_not_installed(U),shizuku_not_running(U),shizuku_needs_permission(U),shizuku_ready(U),shizuku_unsupported(U),shizuku_open(U),shizuku_authorize(U),shizuku_apply(U),access_adb_title(U),access_adb_run(U),access_adb_undo(U),googletv_title(U),googletv_warning(U),googletv_disable(U),access_notifications_title(U),access_notifications_intro(U),notifications_blocked_note(U),settings_notifications(U),notifications_on(U),notifications_off(U),notifications_lost(U),settings_saver(U),saver_off(U),saver_minutes(U),settings_updates(U),settings_about(U),chip_update(U),update_title(U),update_install(U),update_later(U),update_downloading(U),update_failed(U),about_title(U),about_version(U),about_license(U),about_privacy_title(U),about_privacy(U),about_credits_title(U),about_credits(U),screen_unavailable(U),theme_apple_tv(U),theme_atv_launcher(U),theme_mi_tv_box(U),theme_android_google_tv(U),theme_omarchy_tv(U),theme_hint(U),category_appearance(U),category_appearance_detail(U),category_home(U),category_home_detail(U),category_weather(U),category_weather_detail(U),category_saver(U),category_system(U),category_system_detail(U),value_yes(U),value_no(U),settings_network(U),action_save(U),tray_name_city(U),city_use_auto(U),trays_hint(U),notifications_clear_all(U),notifications_remove(U),notifications_limited(U),notifications_action_failed(U),settings_wallpaper(U),wallpaper_hint(U),wallpaper_none(U),wallpaper_add(U),wallpaper_add_hint(U),wallpaper_dim(U),wallpaper_dim_hint(U),wallpaper_yours(U),wallpaper_included(U),wallpaper_in_use(U),wallpaper_kind_image(U),wallpaper_kind_video(U),wallpaper_use(U),wallpaper_remove(U),wallpaper_folder_empty(U),wallpaper_copying(U),wallpaper_copy_failed(U),wallpaper_broken(U),dim_none(U),dim_light(U),dim_medium(U),dim_strong(U),storage_internal(U),storage_usb(U),files_permission_denied(U),settings_font(U),font_hint(U),font_auto(U),font_poppins(U),font_barlow(U),font_prompt(U),font_oxygen(U),saver_hint(U),saver_system_section(U),saver_system_note(U),saver_system_open(U),home_captured(U),notifications_shizuku(U),override_title(U),override_note(U),override_open_settings(U),override_turn_off(U),override_toast(U),saver_style_clock(U),saver_style_dvd(U),saver_style_rain(U),saver_section_models(U),saver_preview(U),saver_fullscreen(U),topbar_notifications(U),topbar_usb(U),topbar_network(U),chip_power(U),card_size_small(U),card_size_medium(U),card_size_large(U),wallpaper_dunes_sunset(U),wallpaper_dunes_ocean(U),wallpaper_dunes_violet(U),wallpaper_dunes_emerald(U),wallpaper_dunes_ruby(U),wallpaper_dunes_amber(U),wallpaper_dunes_rose(U),wallpaper_dunes_arctic(U),menu_rename(U),menu_launcher_settings(U),move_free(U),move_to_category(U),move_hint(U),rename_hint(U),rename_field(U),rename_restore(U),tray_apps(U),tray_apps_hint(U),category_top_bar(U),category_top_bar_detail(U),top_bar_buttons(U),top_bar_settings_hidden(U),top_bar_order(U),top_bar_order_hint(U),top_bar_move_left(U),top_bar_move_right(U),top_bar_text(U),top_bar_labels(U),top_bar_network_name(U),top_bar_information(U),top_bar_clock(U),top_bar_date(U),home_section_cards(U),home_section_organize(U),settings_card_size(U),settings_app_name(U),settings_tray_names(U),power_title(U),power_sleep(U),power_reboot(U),power_shutdown(U),power_reboot_note(U),power_shutdown_note(U),power_needs_shizuku(U),capture_title(U),capture_hint(U),capture_is_on(U),capture_is_off(U),capture_turn_on(U),capture_turn_off(U),capture_warning(U),capture_service_description(U),tray_apps_hint_other(U),tray_change_category(U),app_version(U),saver_system_fallback(U),about_creator_title(U),about_creator(U),about_license_title(U)],style[Theme_Loop(U),Theme_Loop_Menu(U)],xml[file_paths(U),dream(U),home_capture(U)];23^24,12b^11f;;;"/>
+    </map>
+
+</incidents>

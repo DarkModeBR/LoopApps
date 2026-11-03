@@ -1,0 +1,9 @@
+com.loop.launcher.app-pngs-0 C:\Users\Administrator\Desktop\Ravager Launcher\app\build\generated\res\pngs\release
+com.loop.launcher.app-updated_navigation_xml-1 C:\Users\Administrator\Desktop\Ravager Launcher\app\build\generated\updated_navigation_xml\release
+com.loop.launcher.app-packageReleaseResources-2 C:\Users\Administrator\Desktop\Ravager Launcher\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.loop.launcher.app-packageReleaseResources-3 C:\Users\Administrator\Desktop\Ravager Launcher\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.loop.launcher.app-merged-not-compiled-resources-4 C:\Users\Administrator\Desktop\Ravager Launcher\app\build\intermediates\merged-not-compiled-resources\release
+com.loop.launcher.app-release-5 C:\Users\Administrator\Desktop\Ravager Launcher\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.loop.launcher.app-main-6 C:\Users\Administrator\Desktop\Ravager Launcher\app\src\main\res
+com.loop.launcher.app-release-7 C:\Users\Administrator\Desktop\Ravager Launcher\app\src\release\res
+gradleHome-0 C:\Users\Administrator\.gradle

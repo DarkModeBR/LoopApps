@@ -1,0 +1,298 @@
+android.support.v4.app.RemoteActionCompatParcelizer
+androidx.core.graphics.drawable.IconCompat
+androidx.versionedparcelable.ParcelImpl
+com.loop.launcher.privileged.PowerMenuActivity
+com.loop.launcher.privileged.AccessHelpActivity
+androidx.profileinstaller.ProfileInstallerInitializer
+com.loop.launcher.notifications.NotificationsMenuActivity
+android.support.v4.graphics.drawable.IconCompatParcelizer
+androidx.profileinstaller.ProfileInstallReceiver
+androidx.core.content.FileProvider
+androidx.startup.InitializationProvider
+com.loop.launcher.privileged.IPrivilegedService$Stub
+com.loop.launcher.privileged.HomeCaptureService
+androidx.annotation.Keep
+com.loop.launcher.notifications.LoopNotificationListener
+com.loop.launcher.privileged.IPrivilegedService
+com.loop.launcher.update.UpdateMenuActivity
+androidx.recyclerview.widget.StaggeredGridLayoutManager
+com.loop.launcher.screensaver.SaverActivity
+com.loop.launcher.home.HomeActivity
+androidx.core.app.RemoteActionCompatParcelizer
+androidx.recyclerview.widget.GridLayoutManager
+rikka.shizuku.ShizukuProvider
+androidx.core.app.CoreComponentFactory
+com.loop.launcher.screensaver.LoopDreamService
+androidx.core.app.RemoteActionCompat
+com.loop.launcher.privileged.IPrivilegedService$Default
+com.loop.launcher.privileged.IPrivilegedService$Stub$Proxy
+androidx.lifecycle.ReportFragment
+moe.shizuku.api.BinderContainer
+com.loop.launcher.status.StatusMenuActivity
+com.loop.launcher.privileged.PrivilegedService
+androidx.recyclerview.widget.LinearLayoutManager
+androidx.versionedparcelable.CustomVersionedParcelable
+androidx.core.graphics.drawable.IconCompatParcelizer
+com.loop.launcher.apps.AppMenuActivity
+com.loop.launcher.settings.SettingsMenuActivity
+kotlinx.coroutines.DefaultExecutor: int debugStatus
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: java.lang.Object head$volatile
+kotlinx.coroutines.internal.LockFreeTaskQueueCore: java.lang.Object _next$volatile
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_PAUSE
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker: int workerCtl$volatile
+com.loop.launcher.privileged.IPrivilegedService: java.lang.String DESCRIPTOR
+com.loop.launcher.privileged.IPrivilegedService$Stub: int TRANSACTION_destroy
+kotlinx.coroutines.CancelledContinuation: int _resumed$volatile
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker: int indexInArray
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_ANY
+androidx.versionedparcelable.ParcelImpl: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.internal.LockFreeTaskQueue: java.lang.Object _cur$volatile
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker: java.lang.Object nextParkedWorker
+kotlinx.coroutines.sync.MutexImpl: java.lang.Object owner$volatile
+androidx.concurrent.futures.AbstractResolvableFuture$Waiter: androidx.concurrent.futures.AbstractResolvableFuture$Waiter next
+kotlinx.coroutines.scheduling.WorkQueue: int producerIndex$volatile
+kotlinx.coroutines.EventLoopImplBase$DelayedTask: java.lang.Object _heap
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: long deqIdx$volatile
+androidx.recyclerview.widget.LinearLayoutManager$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_RESUME
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event$Companion Companion
+kotlinx.coroutines.JobSupport: java.lang.Object _state$volatile
+kotlinx.coroutines.UndispatchedCoroutine: boolean threadLocalIsSet
+kotlinx.coroutines.DispatchedCoroutine: int _decision$volatile
+kotlinx.coroutines.CancellableContinuationImpl: java.lang.Object _parentHandle$volatile
+kotlinx.coroutines.internal.ConcurrentLinkedListNode: java.lang.Object _prev$volatile
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_START
+com.loop.launcher.privileged.IPrivilegedService$Stub$Proxy: android.os.IBinder mRemote
+kotlinx.coroutines.scheduling.WorkQueue: int blockingTasksInBuffer$volatile
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: java.lang.Object tail$volatile
+androidx.concurrent.futures.AbstractResolvableFuture: androidx.concurrent.futures.AbstractResolvableFuture$Listener listeners
+kotlinx.coroutines.EventLoopImplBase: int _isCompleted$volatile
+kotlinx.coroutines.internal.LimitedDispatcher: int runningWorkers$volatile
+moe.shizuku.api.BinderContainer: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: int _availablePermits$volatile
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: long enqIdx$volatile
+kotlinx.coroutines.EventLoopImplBase: java.lang.Object _delayed$volatile
+kotlinx.coroutines.internal.LockFreeLinkedListNode: java.lang.Object _prev$volatile
+kotlinx.coroutines.internal.Segment: int cleanedAndPointers$volatile
+kotlinx.coroutines.InvokeOnCancelling: int _invoked$volatile
+kotlinx.coroutines.JobSupport$Finishing: java.lang.Object _exceptionsHolder$volatile
+androidx.lifecycle.Lifecycle$Event: kotlin.enums.EnumEntries $ENTRIES
+kotlinx.coroutines.scheduling.WorkQueue: int consumerIndex$volatile
+kotlinx.coroutines.internal.DispatchedContinuation: java.lang.Object _reusableCancellableContinuation$volatile
+kotlinx.coroutines.android.AndroidExceptionPreHandler: java.lang.Object _preHandler
+kotlinx.coroutines.internal.ResizableAtomicArray: java.util.concurrent.atomic.AtomicReferenceArray array
+kotlinx.coroutines.CancellableContinuationImpl: int _decisionAndIndex$volatile
+androidx.concurrent.futures.AbstractResolvableFuture: java.lang.Object value
+androidx.customview.view.AbsSavedState: android.os.Parcelable$Creator CREATOR
+com.loop.launcher.privileged.IPrivilegedService$Stub: int TRANSACTION_exec
+kotlinx.coroutines.JobSupport: java.lang.Object _parentHandle$volatile
+kotlinx.coroutines.EventLoopImplBase: java.lang.Object _queue$volatile
+kotlinx.coroutines.JobSupport$Finishing: java.lang.Object _rootCause$volatile
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event[] $VALUES
+kotlinx.coroutines.CompletedExceptionally: int _handled$volatile
+androidx.recyclerview.widget.StaggeredGridLayoutManager$SavedState: android.os.Parcelable$Creator CREATOR
+androidx.concurrent.futures.AbstractResolvableFuture$Waiter: java.lang.Thread thread
+kotlinx.coroutines.CancellableContinuationImpl: java.lang.Object _state$volatile
+androidx.recyclerview.widget.StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.android.HandlerDispatcherKt: android.view.Choreographer choreographer
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_STOP
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_DESTROY
+kotlinx.coroutines.scheduling.CoroutineScheduler: long parkedWorkersStack$volatile
+androidx.recyclerview.widget.RecyclerView$SavedState: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.internal.LockFreeLinkedListNode: java.lang.Object _removedRef$volatile
+androidx.concurrent.futures.AbstractResolvableFuture: androidx.concurrent.futures.AbstractResolvableFuture$Waiter waiters
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_CREATE
+kotlinx.coroutines.scheduling.CoroutineScheduler: int _isTerminated$volatile
+kotlinx.coroutines.scheduling.WorkQueue: java.lang.Object lastScheduledTask$volatile
+kotlinx.coroutines.JobSupport$Finishing: int _isCompleting$volatile
+kotlinx.coroutines.DefaultExecutor: java.lang.Thread _thread
+kotlinx.coroutines.internal.LockFreeLinkedListNode: java.lang.Object _next$volatile
+kotlinx.coroutines.internal.ThreadSafeHeap: int _size$volatile
+kotlinx.coroutines.internal.ConcurrentLinkedListNode: java.lang.Object _next$volatile
+kotlinx.coroutines.scheduling.CoroutineScheduler: long controlState$volatile
+kotlinx.coroutines.internal.LockFreeTaskQueueCore: long _state$volatile
+com.loop.launcher.ui.menu.SwitchView: void setTrackOn(int)
+androidx.core.app.RemoteActionCompatParcelizer: RemoteActionCompatParcelizer()
+com.loop.launcher.wallpaper.DimLevel: com.loop.launcher.wallpaper.DimLevel valueOf(java.lang.String)
+android.support.v4.graphics.drawable.IconCompatParcelizer: void write(androidx.core.graphics.drawable.IconCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.recyclerview.widget.RecyclerView: void setOnFlingListener(androidx.recyclerview.widget.RecyclerView$OnFlingListener)
+com.loop.launcher.settings.LayoutMode: com.loop.launcher.settings.LayoutMode valueOf(java.lang.String)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event[] values()
+com.loop.launcher.privileged.IPrivilegedService$Stub$Proxy: android.os.IBinder asBinder()
+androidx.recyclerview.widget.RecyclerView: void setLayoutTransition(android.animation.LayoutTransition)
+androidx.recyclerview.widget.RecyclerView: int getBaseline()
+androidx.core.graphics.drawable.IconCompatParcelizer: IconCompatParcelizer()
+com.loop.launcher.theme.TrayStyle: com.loop.launcher.theme.TrayStyle valueOf(java.lang.String)
+com.loop.launcher.privileged.IPrivilegedService$Stub: android.os.IBinder asBinder()
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$OnFlingListener getOnFlingListener()
+com.loop.launcher.privileged.IPrivilegedService$Stub$Proxy: IPrivilegedService$Stub$Proxy(android.os.IBinder)
+com.loop.launcher.ui.menu.SwitchView: void setThumb(int)
+com.loop.launcher.ui.menu.SwitchView: void setTrackOff(int)
+androidx.recyclerview.widget.RecyclerView: void setItemViewCacheSize(int)
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$RecycledViewPool getRecycledViewPool()
+com.loop.launcher.privileged.IPrivilegedService$Stub: boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
+com.loop.launcher.privileged.ButtonResult: com.loop.launcher.privileged.ButtonResult valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: void setChildDrawingOrderCallback(androidx.recyclerview.widget.RecyclerView$ChildDrawingOrderCallback)
+androidx.core.app.RemoteActionCompatParcelizer: androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel)
+com.loop.launcher.privileged.ShizukuState: com.loop.launcher.privileged.ShizukuState[] values()
+androidx.core.view.ViewCompat$Api29Impl: void saveAttributeDataForStyleable(android.view.View,android.content.Context,int[],android.util.AttributeSet,android.content.res.TypedArray,int,int)
+com.loop.launcher.ui.menu.RadioView: boolean getSelected2()
+com.loop.launcher.ui.menu.SwitchView: int getTrackOff()
+com.loop.launcher.privileged.ReturnResult: com.loop.launcher.privileged.ReturnResult valueOf(java.lang.String)
+com.loop.launcher.settings.TempUnit: com.loop.launcher.settings.TempUnit valueOf(java.lang.String)
+com.loop.launcher.system.NetworkKind: com.loop.launcher.system.NetworkKind valueOf(java.lang.String)
+kotlinx.coroutines.android.AndroidExceptionPreHandler: AndroidExceptionPreHandler()
+kotlin.coroutines.intrinsics.CoroutineSingletons: kotlin.coroutines.intrinsics.CoroutineSingletons valueOf(java.lang.String)
+kotlinx.coroutines.android.AndroidDispatcherFactory: AndroidDispatcherFactory()
+com.loop.launcher.privileged.PrivilegedService: PrivilegedService()
+com.loop.launcher.privileged.ReturnResult: com.loop.launcher.privileged.ReturnResult[] values()
+com.loop.launcher.trays.AppCategory: com.loop.launcher.trays.AppCategory valueOf(java.lang.String)
+kotlinx.coroutines.CoroutineStart: kotlinx.coroutines.CoroutineStart valueOf(java.lang.String)
+androidx.recyclerview.widget.GridLayoutManager: GridLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
+androidx.core.graphics.drawable.IconCompatParcelizer: androidx.core.graphics.drawable.IconCompat read(androidx.versionedparcelable.VersionedParcel)
+com.loop.launcher.update.UpdateMenuActivity: UpdateMenuActivity()
+com.loop.launcher.privileged.PowerAction: com.loop.launcher.privileged.PowerAction[] values()
+kotlin.time.DurationUnit: kotlin.time.DurationUnit[] values()
+androidx.recyclerview.widget.RecyclerView: void setScrollState(int)
+androidx.recyclerview.widget.RecyclerView: int getItemDecorationCount()
+com.loop.launcher.theme.TrayStyle: com.loop.launcher.theme.TrayStyle[] values()
+com.loop.launcher.ui.menu.SwatchView: void setColors(java.util.List)
+androidx.recyclerview.widget.RecyclerView: void setLayoutFrozen(boolean)
+android.support.v4.graphics.drawable.IconCompatParcelizer: IconCompatParcelizer()
+com.loop.launcher.privileged.AutoResult: com.loop.launcher.privileged.AutoResult valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: void setClipToPadding(boolean)
+com.loop.launcher.privileged.IPrivilegedService$Default: void destroy()
+com.loop.launcher.privileged.IPrivilegedService$Stub$Proxy: void destroy()
+rikka.shizuku.ShizukuProvider: ShizukuProvider()
+com.loop.launcher.privileged.AccessHelpActivity: AccessHelpActivity()
+com.loop.launcher.weather.ConditionKey: com.loop.launcher.weather.ConditionKey[] values()
+com.loop.launcher.ui.menu.RadioView: int getColor()
+androidx.core.view.ViewCompat$Api30Impl: java.lang.CharSequence getStateDescription(android.view.View)
+com.loop.launcher.privileged.PowerMenuActivity: PowerMenuActivity()
+com.loop.launcher.status.StatusMenuActivity: StatusMenuActivity()
+androidx.recyclerview.widget.RecyclerView: void setAccessibilityDelegateCompat(androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate)
+com.loop.launcher.home.CardSize: com.loop.launcher.home.CardSize[] values()
+com.loop.launcher.privileged.IPrivilegedService$Default: android.os.IBinder asBinder()
+androidx.recyclerview.widget.RecyclerView: void setViewCacheExtension(androidx.recyclerview.widget.RecyclerView$ViewCacheExtension)
+com.loop.launcher.trays.AppCategory: com.loop.launcher.trays.AppCategory[] values()
+com.loop.launcher.wallpaper.WallpaperKind: com.loop.launcher.wallpaper.WallpaperKind valueOf(java.lang.String)
+com.loop.launcher.ui.FontChoice: com.loop.launcher.ui.FontChoice[] values()
+androidx.profileinstaller.FileSectionType: androidx.profileinstaller.FileSectionType[] values()
+kotlin.time.DurationUnit: kotlin.time.DurationUnit valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: java.lang.CharSequence getAccessibilityClassName()
+androidx.recyclerview.widget.RecyclerView: void suppressLayout(boolean)
+com.loop.launcher.privileged.IPrivilegedService$Default: IPrivilegedService$Default()
+com.loop.launcher.trays.MoveStep: com.loop.launcher.trays.MoveStep[] values()
+com.loop.launcher.settings.LayoutMode: com.loop.launcher.settings.LayoutMode[] values()
+androidx.core.widget.EdgeEffectCompat$Api31Impl: float getDistance(android.widget.EdgeEffect)
+com.loop.launcher.ui.menu.SwatchView: java.util.List getColors()
+androidx.profileinstaller.ProfileInstallReceiver: ProfileInstallReceiver()
+kotlin.coroutines.intrinsics.CoroutineSingletons: kotlin.coroutines.intrinsics.CoroutineSingletons[] values()
+android.support.v4.app.RemoteActionCompatParcelizer: void write(androidx.core.app.RemoteActionCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.core.content.FileProvider: FileProvider()
+com.loop.launcher.settings.LanguageChoice: com.loop.launcher.settings.LanguageChoice[] values()
+com.loop.launcher.settings.LanguageChoice: com.loop.launcher.settings.LanguageChoice valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: boolean getClipToPadding()
+androidx.core.view.ViewCompat$Api28Impl: boolean isScreenReaderFocusable(android.view.View)
+com.loop.launcher.screensaver.SaverActivity: SaverActivity()
+com.loop.launcher.ui.menu.SwitchView: int getTrackOn()
+kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState: kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState[] values()
+androidx.recyclerview.widget.RecyclerView: int getMaxFlingVelocity()
+com.loop.launcher.system.NetworkKind: com.loop.launcher.system.NetworkKind[] values()
+com.loop.launcher.wallpaper.DimLevel: com.loop.launcher.wallpaper.DimLevel[] values()
+androidx.core.view.ViewCompat$Api28Impl: java.lang.CharSequence getAccessibilityPaneTitle(android.view.View)
+com.loop.launcher.privileged.IPrivilegedService$Default: java.lang.String exec(java.lang.String[])
+com.loop.launcher.home.TopButton: com.loop.launcher.home.TopButton valueOf(java.lang.String)
+com.loop.launcher.screensaver.SaverStyle: com.loop.launcher.screensaver.SaverStyle valueOf(java.lang.String)
+androidx.core.app.RemoteActionCompatParcelizer: void write(androidx.core.app.RemoteActionCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$ItemAnimator getItemAnimator()
+androidx.recyclerview.widget.RecyclerView: long getNanoTime()
+com.loop.launcher.home.CardSize: com.loop.launcher.home.CardSize valueOf(java.lang.String)
+com.loop.launcher.notifications.NotificationsMenuActivity: NotificationsMenuActivity()
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory getEdgeEffectFactory()
+androidx.recyclerview.widget.RecyclerView: void setScrollingTouchSlop(int)
+androidx.recyclerview.widget.RecyclerView: void setItemAnimator(androidx.recyclerview.widget.RecyclerView$ItemAnimator)
+com.loop.launcher.privileged.IPrivilegedService: java.lang.String exec(java.lang.String[])
+androidx.recyclerview.widget.RecyclerView: void setEdgeEffectFactory(androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory)
+com.loop.launcher.screensaver.LoopDreamService: LoopDreamService()
+com.loop.launcher.privileged.IPrivilegedService$Stub: com.loop.launcher.privileged.IPrivilegedService asInterface(android.os.IBinder)
+androidx.profileinstaller.FileSectionType: androidx.profileinstaller.FileSectionType valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy: androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy[] values()
+androidx.core.content.FileProvider: FileProvider(int)
+com.loop.launcher.wallpaper.WallpaperKind: com.loop.launcher.wallpaper.WallpaperKind[] values()
+com.loop.launcher.ui.menu.RadioView: void setColor(int)
+com.loop.launcher.weather.ConditionKey: com.loop.launcher.weather.ConditionKey valueOf(java.lang.String)
+kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState: kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState valueOf(java.lang.String)
+com.loop.launcher.ui.menu.RadioView: void setSelected2(boolean)
+androidx.core.view.ViewCompat$Api29Impl: android.view.View$AccessibilityDelegate getAccessibilityDelegate(android.view.View)
+androidx.recyclerview.widget.RecyclerView: void setDebugAssertionsEnabled(boolean)
+com.loop.launcher.home.ChipView: void setBadge(int)
+com.loop.launcher.privileged.AutoResult: com.loop.launcher.privileged.AutoResult[] values()
+com.loop.launcher.ui.menu.SwitchView: int getThumb()
+com.loop.launcher.update.InstallOutcome: com.loop.launcher.update.InstallOutcome valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: void setOnScrollListener(androidx.recyclerview.widget.RecyclerView$OnScrollListener)
+androidx.profileinstaller.ProfileInstallerInitializer: ProfileInstallerInitializer()
+com.loop.launcher.privileged.IPrivilegedService: void destroy()
+androidx.recyclerview.widget.LinearLayoutManager: LinearLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
+com.loop.launcher.update.InstallOutcome: com.loop.launcher.update.InstallOutcome[] values()
+androidx.recyclerview.widget.RecyclerView: androidx.core.view.NestedScrollingChildHelper getScrollingChildHelper()
+com.loop.launcher.ui.FontWeight: com.loop.launcher.ui.FontWeight valueOf(java.lang.String)
+androidx.core.graphics.drawable.IconCompatParcelizer: void write(androidx.core.graphics.drawable.IconCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.core.view.ViewCompat$Api28Impl: boolean isAccessibilityHeading(android.view.View)
+com.loop.launcher.privileged.IPrivilegedService$Stub$Proxy: java.lang.String getInterfaceDescriptor()
+com.loop.launcher.home.HeaderView: android.widget.LinearLayout getChips()
+androidx.recyclerview.widget.RecyclerView$Api35Impl: void setFrameContentVelocity(android.view.View,float)
+androidx.recyclerview.widget.RecyclerView: int getScrollState()
+com.loop.launcher.notifications.NotificationStatus: com.loop.launcher.notifications.NotificationStatus[] values()
+androidx.core.app.CoreComponentFactory: CoreComponentFactory()
+com.loop.launcher.screensaver.SaverStyle: com.loop.launcher.screensaver.SaverStyle[] values()
+com.loop.launcher.ui.FontChoice: com.loop.launcher.ui.FontChoice valueOf(java.lang.String)
+android.support.v4.app.RemoteActionCompatParcelizer: androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.tracing.TraceApi29Impl: boolean isEnabled()
+com.loop.launcher.privileged.ShizukuState: com.loop.launcher.privileged.ShizukuState valueOf(java.lang.String)
+com.loop.launcher.privileged.IPrivilegedService$Stub$Proxy: java.lang.String exec(java.lang.String[])
+kotlin.io.FileWalkDirection: kotlin.io.FileWalkDirection[] values()
+com.loop.launcher.privileged.HomeCaptureService: HomeCaptureService()
+androidx.core.view.ViewCompat$Api26Impl: int getImportantForAutofill(android.view.View)
+com.loop.launcher.settings.TempUnit: com.loop.launcher.settings.TempUnit[] values()
+androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy: androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy valueOf(java.lang.String)
+androidx.core.view.ViewCompat$Api26Impl: void setImportantForAutofill(android.view.View,int)
+com.loop.launcher.apps.AppMenuActivity: AppMenuActivity()
+com.loop.launcher.privileged.AccessKind: com.loop.launcher.privileged.AccessKind[] values()
+com.loop.launcher.privileged.AccessKind: com.loop.launcher.privileged.AccessKind valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: void setHasFixedSize(boolean)
+androidx.recyclerview.widget.RecyclerView: void setNestedScrollingEnabled(boolean)
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$LayoutManager getLayoutManager()
+com.loop.launcher.trays.MoveStep: com.loop.launcher.trays.MoveStep valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: void setVerboseLoggingEnabled(boolean)
+android.support.v4.graphics.drawable.IconCompatParcelizer: androidx.core.graphics.drawable.IconCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.recyclerview.widget.RecyclerView: int getMinFlingVelocity()
+com.loop.launcher.home.HeaderView: void setWeather(java.lang.String)
+kotlin.io.FileWalkDirection: kotlin.io.FileWalkDirection valueOf(java.lang.String)
+android.support.v4.app.RemoteActionCompatParcelizer: RemoteActionCompatParcelizer()
+kotlinx.coroutines.CoroutineStart: kotlinx.coroutines.CoroutineStart[] values()
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event valueOf(java.lang.String)
+com.loop.launcher.home.ChipView: void setLabel(java.lang.CharSequence)
+com.loop.launcher.notifications.LoopNotificationListener: LoopNotificationListener()
+androidx.recyclerview.widget.RecyclerView: void setAdapter(androidx.recyclerview.widget.RecyclerView$Adapter)
+androidx.recyclerview.widget.RecyclerView: void setRecycledViewPool(androidx.recyclerview.widget.RecyclerView$RecycledViewPool)
+com.loop.launcher.privileged.IPrivilegedService$Stub: IPrivilegedService$Stub()
+androidx.startup.InitializationProvider: InitializationProvider()
+com.loop.launcher.home.HomeActivity: HomeActivity()
+com.loop.launcher.privileged.PowerAction: com.loop.launcher.privileged.PowerAction valueOf(java.lang.String)
+androidx.recyclerview.widget.RecyclerView: void setLayoutManager(androidx.recyclerview.widget.RecyclerView$LayoutManager)
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerView$Adapter getAdapter()
+com.loop.launcher.home.ChipView: void setIcon(int)
+androidx.recyclerview.widget.RecyclerView: void setRecyclerListener(androidx.recyclerview.widget.RecyclerView$RecyclerListener)
+androidx.core.widget.EdgeEffectCompat$Api31Impl: float onPullDistance(android.widget.EdgeEffect,float,float)
+com.loop.launcher.ui.FontWeight: com.loop.launcher.ui.FontWeight[] values()
+androidx.recyclerview.widget.RecyclerView: void setPreserveFocusAfterLayout(boolean)
+androidx.recyclerview.widget.RecyclerView: boolean getPreserveFocusAfterLayout()
+androidx.lifecycle.ReportFragment: ReportFragment()
+com.loop.launcher.settings.SettingsMenuActivity: SettingsMenuActivity()
+com.loop.launcher.notifications.NotificationStatus: com.loop.launcher.notifications.NotificationStatus valueOf(java.lang.String)
+com.loop.launcher.privileged.ButtonResult: com.loop.launcher.privileged.ButtonResult[] values()
+androidx.recyclerview.widget.RecyclerView: androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate getCompatAccessibilityDelegate()
+com.loop.launcher.home.TopButton: com.loop.launcher.home.TopButton[] values()
+androidx.recyclerview.widget.RecyclerView: boolean isLayoutSuppressed()
+androidx.recyclerview.widget.StaggeredGridLayoutManager: StaggeredGridLayoutManager(android.content.Context,android.util.AttributeSet,int,int)
