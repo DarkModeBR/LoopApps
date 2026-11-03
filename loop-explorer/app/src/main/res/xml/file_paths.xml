@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="updates" path="updates/" />
+    <!-- Any file the user opens with another app or installs, on the device or a pen drive. -->
+    <root-path name="root" path="/" />
+</paths>
