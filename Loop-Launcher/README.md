@@ -1,4 +1,6 @@
-# Ravager Launcher
+# Loop Launcher
+
+![Loop Launcher](Banner.png)
 
 Launcher de código aberto para TV Box, Android TV e Google TV: simples, leve e sem anúncios.
 *Open source launcher for TV boxes, Android TV and Google TV: simple, light and ad-free. English below.*
@@ -26,11 +28,11 @@ Requer Android 7.0 ou superior.
 
 Em **Ajustes › Launcher e sistema › Definir como launcher padrão**, o launcher tenta abrir a tela do sistema. Se o aparelho não permitir, ele oferece duas alternativas, com o comando exato para o seu aparelho:
 
-- **Shizuku:** instale e inicie o [Shizuku](https://shizuku.rikka.app), autorize o Ravager e toque em Aplicar.
+- **Shizuku:** instale e inicie o [Shizuku](https://shizuku.rikka.app), autorize o Loop e toque em Aplicar.
 - **ADB**, a partir de um computador ou celular:
 
   ```
-  adb shell cmd package set-home-activity com.ravager.launcher/.home.HomeActivity
+  adb shell cmd package set-home-activity com.loop.launcher/.home.HomeActivity
   ```
 
 Para desfazer, repita o comando com o nome do launcher anterior, que a tela de ajuda mostra.
@@ -42,14 +44,14 @@ Para desfazer, repita o comando com o nome do launcher anterior, que a tela de a
 O caminho é o mesmo: tela do sistema, Shizuku ou comando no ADB.
 
 ```
-adb shell cmd notification allow_listener com.ravager.launcher/com.ravager.launcher.notifications.RavagerNotificationListener
+adb shell cmd notification allow_listener com.loop.launcher/com.loop.launcher.notifications.LoopNotificationListener
 ```
 
 Em aparelhos de pouca memória, o Android bloqueia esse acesso, mesmo com o comando. Nesses aparelhos, as notificações só aparecem com o Shizuku ativo; Abrir leva à tela da notificação ou inicia o app dela, e Remover tira a notificação só da lista do launcher.
 
 ## Limites conhecidos
 
-- Se o botão Home abrir outro launcher mesmo com o Ravager como padrão, verifique se esse launcher tem um serviço de acessibilidade ligado. A tela **Definir como launcher padrão** avisa e ajuda a desligar.
+- Se o botão Home abrir outro launcher mesmo com o Loop como padrão, verifique se esse launcher tem um serviço de acessibilidade ligado. A tela **Definir como launcher padrão** avisa e ajuda a desligar.
 - Vídeos e GIFs grandes podem pesar em aparelhos fracos. Eles só tocam com a tela inicial aberta.
 - Sem root, o Shizuku precisa ser iniciado de novo depois de reiniciar o aparelho. Isso afeta o nome do Wi-Fi e as notificações em aparelhos de pouca memória. A troca de launcher continuou valendo no aparelho de teste.
 - Sem Shizuku, o botão de rede mostra só "Wi-Fi", não o nome da rede.
@@ -86,7 +88,7 @@ A launcher home screen with clock, date and weather, apps as cards in trays, two
 **Set as default:** open **Settings › Launcher and system › Set as default launcher**. If the device does not allow it, the screen offers Shizuku or this ADB command, with the exact undo command for your device:
 
 ```
-adb shell cmd package set-home-activity com.ravager.launcher/.home.HomeActivity
+adb shell cmd package set-home-activity com.loop.launcher/.home.HomeActivity
 ```
 
 On Google TV the switch is not guaranteed. The launcher always checks the result and stays usable when opened manually.
