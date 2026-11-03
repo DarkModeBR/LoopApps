@@ -470,6 +470,7 @@ class HomeActivity : BaseActivity(), CardListener {
             UrlConnectionHttpGet(),
             BuildConfig.VERSION_NAME,
             BuildConfig.UPDATE_REPO,
+            BuildConfig.UPDATE_TAG_PREFIX,
             settings,
             System::currentTimeMillis,
         )

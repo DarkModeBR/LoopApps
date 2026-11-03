@@ -19,6 +19,7 @@ android {
         versionCode = 1
         versionName = "0.1.0"
         buildConfigField("String", "UPDATE_REPO", "\"${providers.gradleProperty("ravager.updateRepo").orNull.orEmpty()}\"")
+        buildConfigField("String", "UPDATE_TAG_PREFIX", "\"${providers.gradleProperty("ravager.updateTag").orNull.orEmpty()}\"")
     }
 
     signingConfigs {

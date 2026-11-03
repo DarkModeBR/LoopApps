@@ -259,6 +259,6 @@
     <string name="app_version">Versão %1$s</string>
     <string name="saver_system_fallback">Este aparelho não tem caminho direto. Procure Protetor de tela nas configurações.</string>
     <string name="about_creator_title">Criador</string>
-    <string name="about_creator">O Ravager Launcher foi criado por DarkModeBR.\ngithub.com/DarkModeBR/Ravager-Launcher</string>
+    <string name="about_creator">O Ravager Launcher foi criado por DarkModeBR.\ngithub.com/DarkModeBR/RavagerApps</string>
     <string name="about_license_title">Licença</string>
 </resources>

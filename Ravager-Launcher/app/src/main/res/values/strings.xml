@@ -260,6 +260,6 @@
     <string name="app_version">Version %1$s</string>
     <string name="saver_system_fallback">This device has no direct path. Look for Screen saver in the settings.</string>
     <string name="about_creator_title">Creator</string>
-    <string name="about_creator">Ravager Launcher was created by DarkModeBR.\ngithub.com/DarkModeBR/Ravager-Launcher</string>
+    <string name="about_creator">Ravager Launcher was created by DarkModeBR.\ngithub.com/DarkModeBR/RavagerApps</string>
     <string name="about_license_title">License</string>
 </resources>
